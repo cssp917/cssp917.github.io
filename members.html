@@ -1,0 +1,1724 @@
+
+    <!doctype html>
+    <html lang="zh-TW">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CSSP Lab - Members</title>
+      
+      <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+      <style>
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; color: #222; padding-top: 70px; }
+        h3, h4 { font-weight: 700; margin-bottom: 30px; letter-spacing: -0.5px; }
+        .section-padding { padding: 60px 0; }
+        .bg-light-gray { background-color: #f9f9f9; }
+        a { color: #000; transition: color 0.2s; }
+        a:hover { color: #555; text-decoration: none; }
+
+        /* 導覽列 Active 樣式 */
+        .navbar-nav .nav-item.active .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+            border-bottom: 2px solid #000;
+        }
+        .navbar-nav .nav-link {
+            margin: 0 10px;
+            color: #555;
+        }
+
+        /* 校友頭像樣式 */
+        .alumni-avatar-circle {
+            width: 85px; height: 85px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            color: white; font-weight: bold; font-size: 1.6rem;
+            margin: 0 auto 15px;
+            background-color: #6c757d;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .alumni-avatar-circle img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            position: absolute; top: 0; left: 0;
+            z-index: 2;
+        }
+        .alumni-thesis-text {
+            display: block; overflow: visible; text-overflow: clip;
+            min-height: 3em; line-height: 1.5; font-size: 0.75rem;
+            color: #777; margin-top: 5px; text-align: left; padding: 0 5px;
+            word-break: break-all;
+        }
+
+        /* 輪播樣式 */
+        .carousel-item { height: 400px; background-color: #333; }
+        .carousel-item img { width: 100%; height: 100%; object-fit: contain; opacity: 0.9; }
+        .carousel-caption { background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px; }
+
+        /* 論文列表樣式 */
+        .pub-item { border-left: 3px solid #eee; transition: all 0.2s; }
+        .pub-item:hover { border-left: 3px solid #007bff; background: #f8f9fa; }
+        .pub-img-box { width: 160px; height: 100px; background: #eee; flex-shrink: 0; overflow: hidden; border-radius: 4px; }
+        .pub-img-box img { width: 100%; height: 100%; object-fit: contain; background-color: #f8f9fa; }
+        
+        /* 照片畫廊樣式 */
+        .gallery-img { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; transition: transform 0.2s; }
+        .gallery-img:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* 媒體卡片樣式 */
+        .media-card { transition: transform 0.2s; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .media-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        @media (max-width: 768px) { .carousel-item { height: 250px; } .pub-img-box { display: none; } }
+      </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+      
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #fff; border-bottom: 1px solid #eee;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" style="font-weight: 700; font-size: 1.5rem;">CSSP Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto"><li class="nav-item "><a class="nav-link" href="index.html">首頁 Home</a></li><li class="nav-item active"><a class="nav-link" href="members.html">成員 Members</a></li><li class="nav-item "><a class="nav-link" href="courses.html">課程 Courses</a></li><li class="nav-item "><a class="nav-link" href="gallery.html">活動剪影 Gallery</a></li><li class="nav-item "><a class="nav-link" href="resources.html">成果與資源 Resources</a></li></ul>
+        </div>
+      </div>
+    </nav>
+    
+      
+    <section id="members" class="section-padding">
+        <div class="container">
+             <h3>研究團隊 <small class="text-muted" style="font-size: 0.6em;">Members</small></h3>
+             <div class="row">
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=1dlxN3HKDP7-uQtL5p0vTBsjAU9_NRgFR" alt="吳炳飛 Bing-Fei Wu" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">吳炳飛 Bing-Fei Wu</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-success mr-1" style="font-weight:normal; font-size:0.8em;">PROFESSOR</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Image Recognition & Intelligent Transportation Systems</div>
+            <div><a href="mailto:bwu@nycu.edu.tw" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://cn.nycu.edu.tw/teachers.php?pa=getItem&teacher_id=286&locale=tw" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a><a href="https://scholar.google.com.tw/citations?user=7-23WmIAAAAJ&hl=zh-TW&oi=ao" target="_blank" title="Google Scholar" style="color: #333; margin: 0 5px;"><i class="fas fa-graduation-cap"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=1FA_jLZ1fNNiRB4rsKfuIARMm_FWgqQnp" alt="蔡淑閔 Shu-Min Tsai" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">蔡淑閔 Shu-Min Tsai</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-warning mr-1" style="font-weight:normal; font-size:0.8em;">AA</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;"></div>
+            <div><a href="mailto:nadia@nycu.edu.tw" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=1o5A7BKFSPzC2Rt5jnBsRrPVzd5fFu9X9" alt="陳韋澎 Wei-Peng Tang" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">陳韋澎 Wei-Peng Tang</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">PHD</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Remote Vital Sign Sensing & Signal and Image Processing</div>
+            <div><a href="mailto:richardtang6866@gmail.com" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://richard6866.github.io/" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZvAJGchI1Fp1VUhRHSDSdBHME9-Fs6Pt" alt="孫健文 Chien-Wen Sun" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">孫健文 Chien-Wen Sun</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">PHD</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Trajectory Planning & Cognitive Science</div>
+            <div><a href="mailto:cwsun.ee12@nycu.edu.tw" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://sshouhua.github.io/" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=11ifHB910ACOCAQixJsCNA83cSUh4phHA" alt="林芝嫻 Jhih-Sian Lin" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">林芝嫻 Jhih-Sian Lin</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">PHD</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Remote Vital Sign Sensing & Signal and Image Processing</div>
+            <div><a href="mailto:polly910225@gmail.com" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://JSLin02.github.io/" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=1F9oowY9Xeb5tx0pYsyn237u3HQ_sXaVY" alt="曾致崴 Chih-Wei Tseng" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">曾致崴 Chih-Wei Tseng</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-dark mr-1" style="font-weight:normal; font-size:0.8em;">RA</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Health AI & Generative AI</div>
+            <div><a href="mailto:wiso890216@gmail.com" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://sorata2894.github.io/Chih-Wei_Personal_website/index.html#about" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=19wbYizFjr1997y1SlIRG0xr6aG1XbdLx" alt="吳沛熏 Pei-Hsun Wu" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">吳沛熏 Pei-Hsun Wu</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-info mr-1" style="font-weight:normal; font-size:0.8em;">MASTER</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Vision Language Model Fine-tuning & Multimodal Learning</div>
+            <div><a href="mailto:wu2001.sc08@nycu.edu.tw" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://ph532.github.io/" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=1jnbUowrX3m0gG8zk5jOYHOWI0fF_Zim6" alt="吳欣諺 Hsin-Yen Wu" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">吳欣諺 Hsin-Yen Wu</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-info mr-1" style="font-weight:normal; font-size:0.8em;">MASTER</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Text-to-Image Generation & Text Extraction</div>
+            <div><a href="mailto:jamiepatty0315@gmail.com" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://hsinyen5.github.io/" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=13y2LvgNSWzC3ZgE9MqKKateHGITGqowu" alt="李長鑫 Chang-Hsin Lee" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">李長鑫 Chang-Hsin Lee</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-info mr-1" style="font-weight:normal; font-size:0.8em;">MASTER</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Diffusion Model & Generative AI</div>
+            <div><a href="mailto:yoyo010528@gmail.com" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://lee-910530.github.io/" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        
+        <div class="col-md-3 col-sm-6 text-center" style="margin-bottom: 40px;">
+            <div style="width: 150px; height: 150px; margin: 0 auto 15px; overflow: hidden; border-radius: 50%; border: 3px solid #f8f9fa;">
+                <img src="https://drive.google.com/thumbnail?sz=w1000&id=1_ow9pJgkqbYd1BGuDNACkaMW0i6xNSJf" alt="林宗佑 Zong-You Lin" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
+            </div>
+            <h5 style="font-weight: 700; margin-bottom: 5px;">林宗佑 Zong-You Lin</h5>
+            <div style="margin-bottom: 10px;"><span class="badge badge-info mr-1" style="font-weight:normal; font-size:0.8em;">MASTER</span></div>
+            <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px; min-height: 21px;">Remote Vital Sign Sensing & Signal and Image Processing</div>
+            <div><a href="mailto:yoyo010528@gmail.com" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope"></i></a><a href="https://zong-you-028.github.io/" target="_blank" title="" style="color: #333; margin: 0 5px;"><i class="fas fa-globe"></i></a></div>
+        </div>
+        </div>
+        </div>
+    </section>
+    
+    <section id="alumni" class="section-padding bg-light-gray">
+        <div class="container">
+             <h3>歷屆成員 <small class="text-muted" style="font-size: 0.6em;">Alumni</small></h3>
+             
+    <div class="alert alert-light border shadow-sm mb-4" role="alert" style="font-size: 0.95rem; border-left: 5px solid #17a2b8 !important;">
+        <h6 class="alert-heading font-weight-bold" style="font-size: 1rem;">
+            <i class="fas fa-info-circle text-info mr-1"></i> 說明與免責聲明
+        </h6>
+        <p class="mb-1 text-muted">
+            本頁面資訊僅供參考，可能未即時更新。請注意：<strong>年份是以「畢業時間」記錄，而非畢業學年度。</strong>
+        </p>
+        <hr class="my-2">
+        <p class="mb-0">
+            <i class="fas fa-bullhorn text-warning mr-2"></i>
+            歡迎畢業學長姐將目前現況及聯絡方法留下~ 請將資訊寄給 
+            <a href="mailto:csspcssp917ap@gmail.com" class="font-weight-bold text-dark" style="text-decoration: underline;">網頁管理者</a>。
+        </p>
+    </div>
+    
+             
+    <ul class="nav nav-pills justify-content-center mb-4" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#pane-yr_114" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">114</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_113" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">113</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_112" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">112</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_111" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">111</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_110" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">110</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_109" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">109</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_108" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">108</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_107" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">107</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_106" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">106</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_105" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">105</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_104" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">104</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_103" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">103</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_102" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">102</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_101" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">101</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_100" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">100</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_99" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">99</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_98" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">98</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_97" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">97</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_96" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">96</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_95" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">95</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_94" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">94</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_93" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">93</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_92" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">92</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_91" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">91</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_90" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">90</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_89" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">89</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_88" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">88</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_87" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">87</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_86" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">86</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_85" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">85</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_84" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">84</a></li><li class="nav-item"><a class="nav-link " data-toggle="pill" href="#pane-yr_83" style="margin:2px; font-size:0.9rem; border:1px solid #ddd;">83</a></li></ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="pane-yr_114">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林瑞奕</div>
+                    
+                    <div class="alumni-thesis-text" title="基於光體積變化描記圖重建心電圖及心律不整多分類"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於光體積變化描記圖重建心電圖及心律不整多分類</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">李<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">李炳鴻</div>
+                    
+                    <div class="alumni-thesis-text" title="基於 RGB 相機的非接觸式穩健深度學習血氧量測方法"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於 RGB 相機的非接觸式穩健深度學習血氧量測方法</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_113">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">邱<img src="https://drive.google.com/thumbnail?sz=w1000&id=1SQ_YkhjlxqdIVcspT9vzHpldmifS6a9Z" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">邱莉雯</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習與人臉影像的非接觸式生命徵象量測及其在夜間場景的應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習與人臉影像的非接觸式生命徵象量測及其在夜間場景的應用</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1mtwc9bBfw6cNXavykXkj0JOPJJJnrs-t" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳柏瑞</div>
+                    
+                    <div class="alumni-thesis-text" title="輪足混合式移動機器人:整合行人軌跡預測技術之設計與實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>輪足混合式移動機器人:整合行人軌跡預測技術之設計與實現</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">曾<img src="https://drive.google.com/thumbnail?sz=w1000&id=1vkIu7Sjnsd2hC1IdClQHvVKguhNfezBi" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">曾致崴</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>CSSP</div>
+                    <div class="alumni-thesis-text" title="基於邊緣運算裝置之遠距式光體積變化描記圖法心房顫動偵測系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於邊緣運算裝置之遠距式光體積變化描記圖法心房顫動偵測系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林晉緯</div>
+                    
+                    <div class="alumni-thesis-text" title="基於臉部遠距光體積變化描記圖訊號之時序與空間特徵的血壓量測方法"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於臉部遠距光體積變化描記圖訊號之時序與空間特徵的血壓量測方法</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">周<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">周洋任</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習模型之影像式睡眠呼吸中止與減弱事件偵測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習模型之影像式睡眠呼吸中止與減弱事件偵測</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_112">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林玉堃</div>
+                    
+                    <div class="alumni-thesis-text" title="基於聲射與振動訊號於藍寶石晶圓薄化製程之砂輪狀態估測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於聲射與振動訊號於藍寶石晶圓薄化製程之砂輪狀態估測</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">吳<img src="https://drive.google.com/thumbnail?sz=w1000&id=18b6Cfbp1YMT1AT2YTdLQ5O33K86TTpxb" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">吳宜樵</div>
+                    
+                    <div class="alumni-thesis-text" title="基於卷積神經網路的遠程光體積變化描記圖法之實現與應用分析"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於卷積神經網路的遠程光體積變化描記圖法之實現與應用分析</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">吳<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">吳秉璋</div>
+                    
+                    <div class="alumni-thesis-text" title="基於遠距光體積變化描記圖之影像式心房顫動偵測及血壓與血氧估測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於遠距光體積變化描記圖之影像式心房顫動偵測及血壓與血氧估測</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">董<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">董祐誠</div>
+                    
+                    <div class="alumni-thesis-text" title="基於臉部遠距光體積變化描記圖之抗晃動血氧量測系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於臉部遠距光體積變化描記圖之抗晃動血氧量測系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">賴<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">賴俊志</div>
+                    
+                    <div class="alumni-thesis-text" title="基於遠距光體積變化描記圖之多模型的血壓估計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於遠距光體積變化描記圖之多模型的血壓估計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">徐<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">徐麒博</div>
+                    
+                    <div class="alumni-thesis-text" title="基於臉部遠距光體積變化描記圖訊號之波型特徵的血壓量測系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於臉部遠距光體積變化描記圖訊號之波型特徵的血壓量測系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">鄭<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鄭紹恩</div>
+                    
+                    <div class="alumni-thesis-text" title="基於遠距光體積變化描記圖之抗干擾影像式心房顫動偵測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於遠距光體積變化描記圖之抗干擾影像式心房顫動偵測</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林祥竣</div>
+                    
+                    <div class="alumni-thesis-text" title="基於遠程光體積變化描記圖技術之血氧量測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於遠程光體積變化描記圖技術之血氧量測</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_111">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1hogPuDREP1GAo1JEqee_L203SdQSzvMa" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林俊賢</div>
+                    
+                    <div class="alumni-thesis-text" title="應用於人臉辨識之跨域適應方法"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於人臉辨識之跨域適應方法</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">周<img src="https://drive.google.com/thumbnail?sz=w1000&id=1y0WuKSigzlpqjoEedHEqrq2E30V3K8U9" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">周佾緯</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的誤差補償增強演算法應用於強健式遠距心跳估計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的誤差補償增強演算法應用於強健式遠距心跳估計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1PyKwVN17n2j7L55vv_UL5Ky8m2y8e7Z-" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林建州</div>
+                    
+                    <div class="alumni-thesis-text" title="基於臉部影像之rPPG血壓估測及不良脊柱姿態偵測系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於臉部影像之rPPG血壓估測及不良脊柱姿態偵測系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=1wHcW2k9Swn_SSJamHxjwU1t7z5JvlJTV" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張智銓</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習之服飾辨識與分類系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習之服飾辨識與分類系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">蔡<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蔡秉叡</div>
+                    
+                    <div class="alumni-thesis-text" title="基於臉部影像免校準之血壓估測系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於臉部影像免校準之血壓估測系統</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_110">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1NJH8kbPHwA0Wdov1k0wyWd8a3x-bwz9i" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃柏維</div>
+                    
+                    <div class="alumni-thesis-text" title="基於遠距式光體積變化描記圖之影像式駕駛心跳量測及疲勞偵測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於遠距式光體積變化描記圖之影像式駕駛心跳量測及疲勞偵測</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">蘇<img src="https://drive.google.com/thumbnail?sz=w1000&id=1ON3eM8FTXX0TX06CV275Bz7oNeOV6lqx" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蘇暐翔</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的多任務情緒域相互關係半監督式學習應用於臉部二維情緒辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的多任務情緒域相互關係半監督式學習應用於臉部二維情緒辨識</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=1lQw6JDIyXuuV7Rvo0f8vjuLJjw5Xhhmh" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊茵茵</div>
+                    
+                    <div class="alumni-thesis-text" title="基於影像式生理訊號之心房顫動偵測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於影像式生理訊號之心房顫動偵測</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_109">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1QmYXhxa28JnFA-L7r5hNr15DKMGX3kmV" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃偉嘉</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的對齊式特徵學習應用於多角度人臉辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的對齊式特徵學習應用於多角度人臉辨識</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1HKer5Ss-6n-A7Sz_tOMfN_4XEr0RnaGh" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林韻柔</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度跨域轉換之人臉影像防偽辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度跨域轉換之人臉影像防偽辨識</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">何<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">何達弘</div>
+                    
+                    <div class="alumni-thesis-text" title="使用相位補償之分集合併法的非接觸式呼吸訊號重建研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>使用相位補償之分集合併法的非接觸式呼吸訊號重建研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1jzvPjwjQrOJLKGrVVHjHUk-_UEuAhojS" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林均翰</div>
+                    
+                    <div class="alumni-thesis-text" title="睡眠情境中基於影像式呼吸率量測之感興趣區域選取"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>睡眠情境中基於影像式呼吸率量測之感興趣區域選取</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">曾<img src="https://drive.google.com/thumbnail?sz=w1000&id=1L_RY29K9G7fqvezyYOy7HFgC3t_JLo2y" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">曾超岳</div>
+                    
+                    <div class="alumni-thesis-text" title="基於rPPG的夜間心跳量測系統以及攝影機雜訊分析"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於rPPG的夜間心跳量測系統以及攝影機雜訊分析</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">方<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">方宇凡</div>
+                    
+                    <div class="alumni-thesis-text" title="一個使用脈衝傳遞時間及相位差與身體質量指數的基於影像的低幀率連續血壓量測系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>一個使用脈衝傳遞時間及相位差與身體質量指數的基於影像的低幀率連續血壓量測系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">魏<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">魏胤哲</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的銳化對比式特徵學習與多任務半監督式學習應用於臉部動作單元偵測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的銳化對比式特徵學習與多任務半監督式學習應用於臉部動作單元偵測</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃至正</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的3D人臉回歸網路與可見性特徵提取應用於多角度臉部動作單元偵測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的3D人臉回歸網路與可見性特徵提取應用於多角度臉部動作單元偵測</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_108">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZeJchPxs8n-G_7dknRviaY7Sc4erFiH0" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張立欣</div>
+                    
+                    <div class="alumni-thesis-text" title="智慧危險駕駛行為辨識與駕駛瞳孔定位"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>智慧危險駕駛行為辨識與駕駛瞳孔定位</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=1JLpV4hk4RQ9CnPsCZy24TEvki-vypro0" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張育豪</div>
+                    
+                    <div class="alumni-thesis-text" title="結合場景辨識與地圖建立在智慧型機器人上的應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>結合場景辨識與地圖建立在智慧型機器人上的應用</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=1MCJkZvr4h_ewzrOui7La9kk7xZkQFX8d" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張芷瑄</div>
+                    
+                    <div class="alumni-thesis-text" title="智慧型電梯面板及按鈕偵測系統結合按鈕樓層辨識應用於多電梯場景"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>智慧型電梯面板及按鈕偵測系統結合按鈕樓層辨識應用於多電梯場景</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=1j27cbKbK00FAFMWH6RDXEOqhWvqjT7aT" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊博宇</div>
+                    
+                    <div class="alumni-thesis-text" title="結合機械手臂之智慧型電梯機器人控制設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>結合機械手臂之智慧型電梯機器人控制設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=19MQk-tcnSwvjOPfwkdLn5cjfL1ZWvstK" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳俊佑</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習改良訓練損失函數用於人臉辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習改良訓練損失函數用於人臉辨識</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_107">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1_nMzQ7sq6vJjF60xFEboz0YaVAmM5lIv" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳昱銘</div>
+                    
+                    <div class="alumni-thesis-text" title="應用於實際監控場景之基深度學習與合併網路的人臉監控系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於實際監控場景之基深度學習與合併網路的人臉監控系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">莊<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">莊鎧綸</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習使用區域特徵之駕駛行為辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習使用區域特徵之駕駛行為辨識</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=154wC-IVALi3EsgilUH9CefdOTmpjMKMq" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林俊豪</div>
+                    
+                    <div class="alumni-thesis-text" title="基於遠距離體積描述儀的無袖袋影像血壓計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於遠距離體積描述儀的無袖袋影像血壓計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">朱<img src="https://drive.google.com/thumbnail?sz=w1000&id=10CmSEeiWXKelyeZ9jkO5rQxBPpIKUVBW" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">朱允維</div>
+                    
+                    <div class="alumni-thesis-text" title="基於類神經網路之抗光影影像式心跳偵測應用於多天候駕駛場景"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於類神經網路之抗光影影像式心跳偵測應用於多天候駕駛場景</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1RxxGEM2vlrjAjmR7e5rIKIQEWjtEvf8U" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃晴瑋</div>
+                    
+                    <div class="alumni-thesis-text" title="基於乘坐舒適度量測與深度學習路面辨識應用於智慧型輪椅控制器"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於乘坐舒適度量測與深度學習路面辨識應用於智慧型輪椅控制器</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">程<img src="https://drive.google.com/thumbnail?sz=w1000&id=1taUKcqiaem7Mt8RATQhkD2aHyBtENpcF" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">程永欣</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的斜坡偵測應用於智慧型輪椅上坡安全控制器"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的斜坡偵測應用於智慧型輪椅上坡安全控制器</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=1nYkV8paincxRitspQWTfOw3yp3LwEtNN" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張博儒</div>
+                    
+                    <div class="alumni-thesis-text" title="基於防鎖死煞車系統輔以摩擦系數估測系統應用於智慧型輪椅"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於防鎖死煞車系統輔以摩擦系數估測系統應用於智慧型輪椅</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_106">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">曾<img src="https://drive.google.com/thumbnail?sz=w1000&id=1DoybZuqGr1c-k441NT4WhAlBSWU_1A4S" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">曾婉茹</div>
+                    
+                    <div class="alumni-thesis-text" title="結合物件偵測與權重式特徵混合之影像標題生成"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>結合物件偵測與權重式特徵混合之影像標題生成</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">姚<img src="https://drive.google.com/thumbnail?sz=w1000&id=125J8Y3rV04Do8hFQ3-tuzwokwZOJwv1b" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">姚世哲</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習且具有多物件偵測與辨識能力之智慧型自動結帳系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習且具有多物件偵測與辨識能力之智慧型自動結帳系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">侯<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">侯力瑋</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的機器人在前跟人行為並應用於自動載具"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的機器人在前跟人行為並應用於自動載具</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">鄒<img src="https://drive.google.com/thumbnail?sz=w1000&id=17frHvuNaXJparhgegOzgtIRLyWKU-H24" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鄒宗陽</div>
+                    
+                    <div class="alumni-thesis-text" title="即時抗晃動遠距影像式心跳呼吸量測系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>即時抗晃動遠距影像式心跳呼吸量測系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1hogPuDREP1GAo1JEqee_L203SdQSzvMa" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林俊賢</div>
+                    
+                    <div class="alumni-thesis-text" title="基於深度學習的適應性特徵映射應用於個人化表情辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於深度學習的適應性特徵映射應用於個人化表情辨識</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_105">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">鐘<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鐘孟良</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>鉅怡智慧(股)</div>
+                    <div class="alumni-thesis-text" title="應用於車牌辨識系統之車輛偵測技術"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於車牌辨識系統之車輛偵測技術</div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_104">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">曹<img src="https://drive.google.com/thumbnail?sz=w1000&id=1UIkBgVSm2_At0CDt0oPjy0KjSqrt4liS" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">曹哲瑋</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>慧榮</div>
+                    <div class="alumni-thesis-text" title="基於自適應增強演算法的串聯式分類器及物件估測之車輛偵測與追蹤系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於自適應增強演算法的串聯式分類器及物件估測之車輛偵測與追蹤系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林渝翔</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>華碩</div>
+                    <div class="alumni-thesis-text" title="應用於駕駛安全監控之人臉表情辨識系統於雙核心嵌入式平台上之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於駕駛安全監控之人臉表情辨識系統於雙核心嵌入式平台上之實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳柏諺</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>聯發科</div>
+                    <div class="alumni-thesis-text" title="智慧型輪椅機器人基於Q-學習之人員跟隨模糊控制器與舒適度新標準"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>智慧型輪椅機器人基於Q-學習之人員跟隨模糊控制器與舒適度新標準</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">葉<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">葉韋志</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>慧榮</div>
+                    <div class="alumni-thesis-text" title="連續可見光影像的非接觸式呼吸心跳監控系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>連續可見光影像的非接觸式呼吸心跳監控系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">邱<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">邱驍哲</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>方太集團</div>
+                    <div class="alumni-thesis-text" title="永磁馬達遠端監控及在線退磁診斷系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>永磁馬達遠端監控及在線退磁診斷系統</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_103">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">蕭<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蕭凱澤</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>HIWIN</div>
+                    <div class="alumni-thesis-text" title="基於雷射雷達之外形偵測用於多機器人跟隨 以及輪椅機器人的乘坐舒適性評估"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於雷射雷達之外形偵測用於多機器人跟隨 以及輪椅機器人的乘坐舒適性評估</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張家駿</div>
+                    
+                    <div class="alumni-thesis-text" title="手勢辨認在電動輪椅控制的應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>手勢辨認在電動輪椅控制的應用</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_102">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">任<img src="https://drive.google.com/thumbnail?sz=w1000&id=1HHizemdIA7OfVghR5YoGoReciyHQBxsg" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">任正隆</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>宏達電</div>
+                    <div class="alumni-thesis-text" title="基於適應性區域搜尋粒子濾波器之無線行動定位系統暨其整合應用於機器人導航及行人追蹤跟隨"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於適應性區域搜尋粒子濾波器之無線行動定位系統暨其整合應用於機器人導航及行人追蹤跟隨</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">高<img src="https://drive.google.com/thumbnail?sz=w1000&id=1zUlcBQeB72Y4P8cdqqBBaRMz133vVVWx" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">高志忠</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>工研院</div>
+                    <div class="alumni-thesis-text" title="影像處理與粒子濾波器於智慧型車輛偵測系統之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>影像處理與粒子濾波器於智慧型車輛偵測系統之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1Un_rLpPdsAkrRTdkzSqPrv6-fVAeCe8I" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳盈翰</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>鴻海</div>
+                    <div class="alumni-thesis-text" title="定位追蹤與機器學習技術於嵌入式平台開發及智慧型運輸系統應用之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>定位追蹤與機器學習技術於嵌入式平台開發及智慧型運輸系統應用之研究</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">鄒<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鄒岱佑</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>慧榮科技</div>
+                    <div class="alumni-thesis-text" title="智慧型輪椅機器人基於多感測器融合之遠距離人員偵測與追蹤"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>智慧型輪椅機器人基於多感測器融合之遠距離人員偵測與追蹤</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">曾<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">曾品苡</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>台積電</div>
+                    <div class="alumni-thesis-text" title="基於RGB-D感測器之適應性人基於RGB-D感測器之適應性人員線上學習與追蹤及其在智慧型輪椅機器人的應用員線上學習與追蹤及其在智慧型輪椅機器人的應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於RGB-D感測器之適應性人基於RGB-D感測器之適應性人員線上學習與追蹤及其在智慧型輪椅機器人的應用員線上學習與追蹤及其在智慧型輪椅機器人的應用</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">孫<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">孫岳君</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>松翰科技</div>
+                    <div class="alumni-thesis-text" title="基於Kinect之障礙物偵測與導引系統於嵌入式平台上之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於Kinect之障礙物偵測與導引系統於嵌入式平台上之實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">賴<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">賴柏宏</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>奕力科技</div>
+                    <div class="alumni-thesis-text" title="基於主動外觀模型及支持向量機之人臉表情辨識系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於主動外觀模型及支持向量機之人臉表情辨識系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">王<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">王承濬</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>環鴻科技</div>
+                    <div class="alumni-thesis-text" title="應用於室內之行人追蹤系統及其在手持式裝置上實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於室內之行人追蹤系統及其在手持式裝置上實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳國璋</div>
+                    
+                    <div class="alumni-thesis-text" title="用ZigBee技術實現停車場定位與管理"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>用ZigBee技術實現停車場定位與管理</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">葉<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">葉泰綸</div>
+                    
+                    <div class="alumni-thesis-text" title="應用於Android手機即時互連網之遠端弱勢照護"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於Android手機即時互連網之遠端弱勢照護</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_101">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1Pzy4VCAGi9vdg0xn_nrXy7rhhB8v4EBh" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃皓昱</div>
+                    
+                    <div class="alumni-thesis-text" title="多媒體壓縮與視覺分析技術於嵌入式平台開發及智慧型運輸系統應用之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>多媒體壓縮與視覺分析技術於嵌入式平台開發及智慧型運輸系統應用之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">莊<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">莊志鴻</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>新思科技</div>
+                    <div class="alumni-thesis-text" title="影像式交通偵測系統用於解決複雜環境及交通狀況之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>影像式交通偵測系統用於解決複雜環境及交通狀況之研究</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">葉<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">葉仲軒</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>IMEC</div>
+                    <div class="alumni-thesis-text" title="基於雙核心嵌入式平台之駕駛安全監控系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於雙核心嵌入式平台之駕駛安全監控系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林榮達</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>環鴻科技</div>
+                    <div class="alumni-thesis-text" title="整合即時交通資訊之行車導航及其在嵌入式平台之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>整合即時交通資訊之行車導航及其在嵌入式平台之實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">柯<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">柯佳佑</div>
+                    
+                    <div class="alumni-thesis-text" title="基於Kinect之運用粒子濾波器於多人追蹤與交疊處理"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於Kinect之運用粒子濾波器於多人追蹤與交疊處理</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">江<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">江佳蓉</div>
+                    
+                    <div class="alumni-thesis-text" title="基於主動外觀模型演算法之人臉方向估測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於主動外觀模型演算法之人臉方向估測</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">李<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">李玟芳</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>群聯電子</div>
+                    <div class="alumni-thesis-text" title="輪椅機器人視覺定位與伴隨者辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>輪椅機器人視覺定位與伴隨者辨識</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_100">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊錚諺</div>
+                    
+                    <div class="alumni-thesis-text" title="基於影像式事件偵測技術應用於PTZ攝影機"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於影像式事件偵測技術應用於PTZ攝影機</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">王<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">王昱壬</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>國軍online</div>
+                    <div class="alumni-thesis-text" title="應用於封閉區域內之行人安全監控系統及其在手持式裝置上之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於封閉區域內之行人安全監控系統及其在手持式裝置上之實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">蔡<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蔡旻諭</div>
+                    
+                    <div class="alumni-thesis-text" title="嵌入式即時車輛盲點安全輔助系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>嵌入式即時車輛盲點安全輔助系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳侯諭</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>國軍online</div>
+                    <div class="alumni-thesis-text" title="基於影像追蹤技術偵測隧道內變換車道行為"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於影像追蹤技術偵測隧道內變換車道行為</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃奕勳</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>國軍online</div>
+                    <div class="alumni-thesis-text" title="影像式交通監控系統於隧道內外壅塞場景之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>影像式交通監控系統於隧道內外壅塞場景之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">邱<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">邱詩婷</div>
+                    
+                    <div class="alumni-thesis-text" title="基於影像處理技術之煙霧偵測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於影像處理技術之煙霧偵測</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃冠銘</div>
+                    
+                    <div class="alumni-thesis-text" title="具不規則區域偵測之遠端互動式監控及獨立導引系統 : 應用於兒童及老年人"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具不規則區域偵測之遠端互動式監控及獨立導引系統 : 應用於兒童及老年人</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊翰傑</div>
+                    
+                    <div class="alumni-thesis-text" title="應用雷射測距儀於智慧型輪椅搭載及時跟人系統之模糊控制器設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用雷射測距儀於智慧型輪椅搭載及時跟人系統之模糊控制器設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">呂<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">呂旺全</div>
+                    
+                    <div class="alumni-thesis-text" title="應用於無人載具任務之單眼視覺式目標物定位"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>應用於無人載具任務之單眼視覺式目標物定位</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_99">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃柏嘉</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>宏達電</div>
+                    <div class="alumni-thesis-text" title="整合GPS/GIS/ZigBee之用路人輔助導航系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>整合GPS/GIS/ZigBee之用路人輔助導航系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">劉<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">劉明宗</div>
+                    
+                    <div class="alumni-thesis-text" title="基於快速光流法之單眼視覺自動避障與模糊控制停車導引智慧型輪椅機器人"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於快速光流法之單眼視覺自動避障與模糊控制停車導引智慧型輪椅機器人</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_98">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">馬<img src="https://drive.google.com/thumbnail?sz=w1000&id=1pRDgnnhbmT-u7g3jg7DHuK60T9l7-GKJ" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">馬立山</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>中原大學</div>
+                    <div class="alumni-thesis-text" title="模糊邏輯控制系統之穩定度分析與應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>模糊邏輯控制系統之穩定度分析與應用</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1MXoIs5XL-oq8ZOJ1gg2XGksQCLpdYiA7" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林全財</div>
+                    
+                    <div class="alumni-thesis-text" title="影像處理與電腦視覺技術應用於駕駛輔助系統之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>影像處理與電腦視覺技術應用於駕駛輔助系統之研究</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">劉<img src="https://drive.google.com/thumbnail?sz=w1000&id=1T0CPFvciidWxYJ8RBzIt4dP_HdZSaXaU" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">劉治君</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>中華電信研究所</div>
+                    <div class="alumni-thesis-text" title="視覺化嵌入式交通監控系統-以雪山隧道CCTV影像為例"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>視覺化嵌入式交通監控系統-以雪山隧道CCTV影像為例</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">邱<img src="https://drive.google.com/thumbnail?sz=w1000&id=1b_BJrHcS5gKJJWZ8_DuLNHZ2EEZI0Ds6" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">邱慎廷</div>
+                    
+                    <div class="alumni-thesis-text" title="整合前方多車道線與障礙物偵測之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>整合前方多車道線與障礙物偵測之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">錢<img src="https://drive.google.com/thumbnail?sz=w1000&id=1_5n9fGSvD1RrdGDnMKjzpnZ_9gzh1sZ8" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">錢海強</div>
+                    
+                    <div class="alumni-thesis-text" title="車輛側邊之盲點與車道偏離警示系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>車輛側邊之盲點與車道偏離警示系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1V97irCvJ31d9k3eMP-Z14ljLxXIoI6-J" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳俊偉</div>
+                    
+                    <div class="alumni-thesis-text" title="混合行人與汽機車於路口之影像式偵測系統研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>混合行人與汽機車於路口之影像式偵測系統研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1HN_mBIRYKIJGP75ezTzhFjMD9HfDiK6c" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林敬達</div>
+                    
+                    <div class="alumni-thesis-text" title="以模糊理論為基礎實現智慧型輪椅機器人之自動停車設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以模糊理論為基礎實現智慧型輪椅機器人之自動停車設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1-V_bP_TdpqJTYQtDs267-K2RYE3cUQcm" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃梓瑋</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>宏達電</div>
+                    <div class="alumni-thesis-text" title="智慧型機器人之基於地圖特徵節點的動態路徑規劃與模糊推論型導航系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>智慧型機器人之基於地圖特徵節點的動態路徑規劃與模糊推論型導航系統</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_97">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">蔣<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蔣欣翰</div>
+                    
+                    <div class="alumni-thesis-text" title="自動車輛駕駛縱向暨橫向控制設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>自動車輛駕駛縱向暨橫向控制設計</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">彭<img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZnTLFX795I7_TR9QdOFK413jYhmMDR-x" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">彭信元</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>宏碁公司</div>
+                    <div class="alumni-thesis-text" title="MPEG-4/H.264視訊壓縮標準於嵌入式系統之最佳化研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>MPEG-4/H.264視訊壓縮標準於嵌入式系統之最佳化研究</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=1bvq7HA_rMSVkK9QsEvoQjFqcfVxkK6Bp" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張家維</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>合勤科技</div>
+                    <div class="alumni-thesis-text" title="全天候嵌入式車輛盲點警示系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>全天候嵌入式車輛盲點警示系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">范<img src="https://drive.google.com/thumbnail?sz=w1000&id=18ttJiIk5-Kkoq8yodYi70bN5et_vljo9" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">范崇瑞</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>友達光電</div>
+                    <div class="alumni-thesis-text" title="以電腦視覺為基礎的夜間車輛偵測與追蹤技術及其在交通監控與駕駛輔助之應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以電腦視覺為基礎的夜間車輛偵測與追蹤技術及其在交通監控與駕駛輔助之應用</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1ogNOwzjHfF3r0xJya_ptFFSEoVGbvcMB" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林玟欣</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>和碩聯合科技</div>
+                    <div class="alumni-thesis-text" title="實現於手持式裝置之即時影像處理技術於車道偏離警示和車牌辨識之應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>實現於手持式裝置之即時影像處理技術於車道偏離警示和車牌辨識之應用</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">侯<img src="https://drive.google.com/thumbnail?sz=w1000&id=1bAhUVl1xCfk7p49WYWNrfV3mPqpCa1yW" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">侯宣亦</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>聯發科技</div>
+                    <div class="alumni-thesis-text" title="即時嵌入式H.264串流伺服器與行動式客戶端之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>即時嵌入式H.264串流伺服器與行動式客戶端之實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=13gccsjTQEs31Hke0VqrFkQo73yVhKrN4" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林仕偉</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>雷凌科技</div>
+                    <div class="alumni-thesis-text" title="整合GPS/GIS於嵌入式平台之主動式車輛導航系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>整合GPS/GIS於嵌入式平台之主動式車輛導航系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">何<img src="https://drive.google.com/thumbnail?sz=w1000&id=1sJAsDPeEag8okxPM-3HIWPLL2TUa6l0r" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">何威儀</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>聯發科技</div>
+                    <div class="alumni-thesis-text" title="以DSP為基礎之合作式路口安全策略之市區巡航及停走系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以DSP為基礎之合作式路口安全策略之市區巡航及停走系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">吳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1EwZWybZuJPcvHYXahJxusgsmizcTU82n" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">吳依庭</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>聯發科技</div>
+                    <div class="alumni-thesis-text" title="以DSP平台實現自動駕駛車輛於車道保持、車道變換及超車控制"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以DSP平台實現自動駕駛車輛於車道保持、車道變換及超車控制</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_96">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=14cv_aVQamR2iJglepDWNxuQM0lVBsr2x" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張世孟</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>中華映管</div>
+                    <div class="alumni-thesis-text" title="運用H∞強健演算法設計前輪操控車輛之控制器"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>運用H∞強健演算法設計前輪操控車輛之控制器</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">鐘<img src="https://drive.google.com/thumbnail?sz=w1000&id=1SouHrrQDz9qee4U7IObTlALAtA3bptE0" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鐘敏偉</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>松翰科技</div>
+                    <div class="alumni-thesis-text" title="即時影像處理技術應用於車道與車輛警示系統之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>即時影像處理技術應用於車道與車輛警示系統之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">蔡<img src="https://drive.google.com/thumbnail?sz=w1000&id=1Rw6SD70dHfI6TYcVdjGwD_GiOtmjWs9C" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蔡秉宗</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>宏達電</div>
+                    <div class="alumni-thesis-text" title="具有環境適應性之即時遠端車輛偵測系統於複雜交通情況之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具有環境適應性之即時遠端車輛偵測系統於複雜交通情況之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">許<img src="https://drive.google.com/thumbnail?sz=w1000&id=1li7QQDf4YzfsM9HBfRagn52a7jpTh7BC" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">許晉源</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>訊連科技</div>
+                    <div class="alumni-thesis-text" title="基於Dual-CoreDSP之H.264與AAC影音同步編解碼器之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於Dual-CoreDSP之H.264與AAC影音同步編解碼器之實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">謝<img src="https://drive.google.com/thumbnail?sz=w1000&id=1d2lEEmErphYs99ak7FBdmAaNfNvNx5D5" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">謝至明</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>華碩公司</div>
+                    <div class="alumni-thesis-text" title="智慧型駕駛輔助暨即時視訊壓縮系統之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>智慧型駕駛輔助暨即時視訊壓縮系統之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">李<img src="https://drive.google.com/thumbnail?sz=w1000&id=1RkHekis63gu1GmckUaTnC3YzEzwJpAwH" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">李俊樺</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>宏碁公司</div>
+                    <div class="alumni-thesis-text" title="以DSP為基礎實現智慧型轉向控制於自動車道保持及車道變換"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以DSP為基礎實現智慧型轉向控制於自動車道保持及車道變換</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">顏<img src="https://drive.google.com/thumbnail?sz=w1000&id=1d7qam0EAio8qqTlDAx5iFzmavoNfyObS" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">顏嘉賢</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>誠致科技</div>
+                    <div class="alumni-thesis-text" title="以DSP為基礎之智慧泛用型適應性巡航控制系統設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以DSP為基礎之智慧泛用型適應性巡航控制系統設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">廖<img src="https://drive.google.com/thumbnail?sz=w1000&id=1hOTosFB13LiWzfBHAzvfEXNS9xw9vBcV" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">廖天佑</div>
+                    
+                    <div class="alumni-thesis-text" title="基於雷射測距儀之車輛定位及地圖建構系統設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於雷射測距儀之車輛定位及地圖建構系統設計</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_95">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1yVVzg5IAfAsmsiLfRA2F13-jZATJMWDR" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳昭榮</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>億像科技</div>
+                    <div class="alumni-thesis-text" title="即時影像處理技術應用於智慧型運輸系統之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>即時影像處理技術應用於智慧型運輸系統之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1YSQO7wlRVfmvtT3suLv1Aw1WbbR8i4Cl" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳彥霖</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>台北科技大學</div>
+                    <div class="alumni-thesis-text" title="影像處理與電腦視覺技術應用於複雜文件影像分析、夜間駕駛輔助、以及視訊監控系統之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>影像處理與電腦視覺技術應用於複雜文件影像分析、夜間駕駛輔助、以及視訊監控系統之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1C0kL-CiVmT8_ZXRmMXgwK3bR_F9SnFLJ" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林重甫</div>
+                    
+                    <div class="alumni-thesis-text" title="JPEG2000之晶片設計與系統整合"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>JPEG2000之晶片設計與系統整合</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1Wl7YnIjsyVwDNwPUAii5Fz08IMjdl7Ek" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃嘉雄</div>
+                    
+                    <div class="alumni-thesis-text" title="MPEG-2/4低複雜度先進音訊編碼最佳化及雙核心處理器實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>MPEG-2/4低複雜度先進音訊編碼最佳化及雙核心處理器實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1RKV4bf8dpjMTzC7Ggddj1dCkEIHTPfrz" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林裕傑</div>
+                    
+                    <div class="alumni-thesis-text" title="高效能雙核心H.264編碼器之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>高效能雙核心H.264編碼器之實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">白<img src="https://drive.google.com/thumbnail?sz=w1000&id=13yYukmRjpDXZlcRuoxOULa8YyNtOVPxL" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">白宗堯</div>
+                    
+                    <div class="alumni-thesis-text" title="具有可變係數之AES加解密器之矽智產設計與晶片實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具有可變係數之AES加解密器之矽智產設計與晶片實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1Jd5-r9YB-_laK7pxTQRTBmcZNIJLYc-l" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳元馨</div>
+                    
+                    <div class="alumni-thesis-text" title="利用車道資訊與停等特徵達成預先交疊偵測與解析"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>利用車道資訊與停等特徵達成預先交疊偵測與解析</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=1WbZzK5nbijpZe9AEyBIN5Qn-vC3nhEr6" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊子萱</div>
+                    
+                    <div class="alumni-thesis-text" title="具無線網路功能之數位錄影機的設計與實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具無線網路功能之數位錄影機的設計與實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張岑瑋</div>
+                    
+                    <div class="alumni-thesis-text" title="以FPGA為基礎之自主性智慧型巡航控制系統設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以FPGA為基礎之自主性智慧型巡航控制系統設計</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_94">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">王<img src="https://drive.google.com/thumbnail?sz=w1000&id=1sA1NxVN6Ng3a3NhAEQMGTG_94BXrVzda" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">王坤卿</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>實踐大學</div>
+                    <div class="alumni-thesis-text" title="以頻帶及小波分析為基礎的強健性語音偵測系統之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以頻帶及小波分析為基礎的強健性語音偵測系統之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">顏<img src="https://drive.google.com/thumbnail?sz=w1000&id=1OgysN5N369J4590-LcKQVM1aIVzL3rNd" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">顏志旭</div>
+                    
+                    <div class="alumni-thesis-text" title="循環碼、MP3以及先進加密標準之複合式編碼研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>循環碼、MP3以及先進加密標準之複合式編碼研究</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">秦<img src="https://drive.google.com/thumbnail?sz=w1000&id=106wbE4Hg1K_eip-yhwgwkcGMC_-3qx8f" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">秦弘毅</div>
+                    
+                    <div class="alumni-thesis-text" title="參數空間法用於擾動控制系統之分析與設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>參數空間法用於擾動控制系統之分析與設計</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">洪<img src="https://drive.google.com/thumbnail?sz=w1000&id=1oT6aiKJ1CD83I6s-8y2sfu0tKw3w3AVE" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">洪堯俊</div>
+                    
+                    <div class="alumni-thesis-text" title="MPEG-4材質編碼器之架構設計與實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>MPEG-4材質編碼器之架構設計與實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">游<img src="https://drive.google.com/thumbnail?sz=w1000&id=13dVDgwUYWkSCeuVAyyW5-6jvODJwWsAq" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">游東龍</div>
+                    
+                    <div class="alumni-thesis-text" title="架構於AMBA系統上之MPEG-4即時影像編碼器設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>架構於AMBA系統上之MPEG-4即時影像編碼器設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">賴<img src="https://drive.google.com/thumbnail?sz=w1000&id=1AFiEGYhCpsSeOH1S1fx5YlF-D3cnMRi2" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">賴則全</div>
+                    
+                    <div class="alumni-thesis-text" title="基於電腦視覺之即時穩健的泛型障礙物與車道偵測行車系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於電腦視覺之即時穩健的泛型障礙物與車道偵測行車系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">鄭<img src="https://drive.google.com/thumbnail?sz=w1000&id=1ErmA0eW06B_M-cTq4C1YdDBCTfzWw7nX" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鄭晏阡</div>
+                    
+                    <div class="alumni-thesis-text" title="以平台架構為基礎之JPEG2000影像編碼矽智產設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以平台架構為基礎之JPEG2000影像編碼矽智產設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1QBn5op_N1mZOKOIyITrxgL1TyyUdT41v" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃培恭</div>
+                    
+                    <div class="alumni-thesis-text" title="任意影像形狀之JPEG2000離散小波轉換晶片設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>任意影像形狀之JPEG2000離散小波轉換晶片設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=11MM8oUyloCMXLSVz3o8lfJhoKez536wr" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林映伶</div>
+                    
+                    <div class="alumni-thesis-text" title="MPEG-2/4低複雜度先進音訊編碼演算法最佳化及在StrongARM平台上之實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>MPEG-2/4低複雜度先進音訊編碼演算法最佳化及在StrongARM平台上之實現</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_93">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">瞿<img src="https://drive.google.com/thumbnail?sz=w1000&id=1JmQ-zyvKnTZbkoJJ0BcwRoON2pprs7tS" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">瞿忠正</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>國防大學</div>
+                    <div class="alumni-thesis-text" title="複雜型複合式文件影像壓縮方法之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>複雜型複合式文件影像壓縮方法之研究</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1WvfRFCbhr57yjkvvQ53SmQuDPJTj44Na" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃俊傑</div>
+                    
+                    <div class="alumni-thesis-text" title="數位家庭門禁管理與WiFi娛樂的設計與實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>數位家庭門禁管理與WiFi娛樂的設計與實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1mfFuU_RNvr77j1F62Ma-h9bhR5AnjsWQ" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃家達</div>
+                    
+                    <div class="alumni-thesis-text" title="基於彩色影像之即時交通監控系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>基於彩色影像之即時交通監控系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1PcVab19ZuVpc6iIHoRwIzRIjC23wgglW" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃琪文</div>
+                    
+                    <div class="alumni-thesis-text" title="具有AHB介面之JPEG2000編碼器系統設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具有AHB介面之JPEG2000編碼器系統設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">曾<img src="https://drive.google.com/thumbnail?sz=w1000&id=1M1-2D1rNRSvU2xUNERhC70mJm35xIsX_" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">曾律嘉</div>
+                    
+                    <div class="alumni-thesis-text" title="使用紅外線傳輸的通用門禁系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>使用紅外線傳輸的通用門禁系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=16aRlp1o-06M0BZ1E63zB-mHAf8_xIvu-" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林煜翔</div>
+                    
+                    <div class="alumni-thesis-text" title="MPEG-1LayerIII音訊編解碼演算法最佳化及DSP晶片實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>MPEG-1LayerIII音訊編解碼演算法最佳化及DSP晶片實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1ej7J_xwx6J5ytLhJyygn-ONnloOiy6GP" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳沛君</div>
+                    
+                    <div class="alumni-thesis-text" title="具平型化處理之JPEG2000方塊編解碼晶片設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具平型化處理之JPEG2000方塊編解碼晶片設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=1V-1C8da6bb_fXCI3kqwJDkvAfHLwgAVw" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃榮煌</div>
+                    
+                    <div class="alumni-thesis-text" title="在MPEG/Audio上資料隱藏方法之研究與使用ADSP-2181數位訊號處理器實現資料隱藏解碼器"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>在MPEG/Audio上資料隱藏方法之研究與使用ADSP-2181數位訊號處理器實現資料隱藏解碼器</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_92">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">胡<img src="https://drive.google.com/thumbnail?sz=w1000&id=1O6U8-lzKGq9BI7Zz_K5fmfWEIeUd0Mj0" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">胡益強</div>
+                    
+                    <div class="alumni-thesis-text" title="多媒體壓縮技術之晶片設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>多媒體壓縮技術之晶片設計</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">彭<img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZQeoMi14QkkTSKf_QhbAOsSHcVZ_fqLb" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">彭昭暐</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>國立陽明交通大學</div>
+                    <div class="alumni-thesis-text" title="非線性控制系統之增益—相位邊際分析用於極限環預測"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>非線性控制系統之增益—相位邊際分析用於極限環預測</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">呂<img src="https://drive.google.com/thumbnail?sz=w1000&id=1gVdYGDAqWoBSL-gPJqQXsEthVoQ6n_BY" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">呂紹麒</div>
+                    
+                    <div class="alumni-thesis-text" title="具NAS功能的ARM-Based數位錄影機"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具NAS功能的ARM-Based數位錄影機</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=10CzoILxW4FeHrl5kX7RvlbyY7xPyUvZJ" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃正恕</div>
+                    
+                    <div class="alumni-thesis-text" title="類比數位式視訊電話"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>類比數位式視訊電話</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">鄭<img src="https://drive.google.com/thumbnail?sz=w1000&id=1UZ3TRBJyywNgPX94pfXFfu--Q8wpNo-9" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鄭光輝</div>
+                    
+                    <div class="alumni-thesis-text" title="嵌入式多媒體系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>嵌入式多媒體系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">魏<img src="https://drive.google.com/thumbnail?sz=w1000&id=1IanxpzDzwOS6-ui8g41MioaknMkZQnCa" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">魏宏宇</div>
+                    
+                    <div class="alumni-thesis-text" title=""><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i></div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=17xW-6gtl4KkISezdtDZ7UbDfnlPwoi5Z" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊明達</div>
+                    
+                    <div class="alumni-thesis-text" title="符合JPEG2000之離散小波轉換與反轉換硬體設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>符合JPEG2000之離散小波轉換與反轉換硬體設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陳<img src="https://drive.google.com/thumbnail?sz=w1000&id=1cE9tiNhBvDwj-uvG3WMDcyyN_EhIEorc" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陳國成</div>
+                    
+                    <div class="alumni-thesis-text" title="具標準紅外線通訊協定與RS232介面的中繼裝置"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具標準紅外線通訊協定與RS232介面的中繼裝置</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">王<img src="https://drive.google.com/thumbnail?sz=w1000&id=1s00Pq-2ZyKfA1YO89r00HRRywdzB8XiG" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">王文賓</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>總茂科技</div>
+                    <div class="alumni-thesis-text" title="複雜文件影像的文字抽取技術"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>複雜文件影像的文字抽取技術</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_91">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1l07nilOhGgUu9EudYrjgOXcoBsThUTaP" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林昌廣</div>
+                    
+                    <div class="alumni-thesis-text" title="嵌入式網路監視系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>嵌入式網路監視系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">許<img src="https://drive.google.com/thumbnail?sz=w1000&id=1POuDX_SAwuw7e1URaUiJJqReyUxMrGZk" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">許子偉</div>
+                    
+                    <div class="alumni-thesis-text" title="MP3錄放機系統設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>MP3錄放機系統設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=1muCBV7On9FVX5wlk41ybAT2GyNlmEwj9" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張芷燕</div>
+                    
+                    <div class="alumni-thesis-text" title="MP3編碼法之研究與實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>MP3編碼法之研究與實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">李<img src="https://drive.google.com/thumbnail?sz=w1000&id=1vs04j_ywBb843zf8EbkhSViOVTDYYV21" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">李宗遠</div>
+                    
+                    <div class="alumni-thesis-text" title="具有AES保密功能之多媒體小助手"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>具有AES保密功能之多媒體小助手</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_90">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">李<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">李俊坤</div>
+                    
+                    <div class="alumni-thesis-text" title="整合JPEG影像與MP3音訊的嵌入式即時作業系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>整合JPEG影像與MP3音訊的嵌入式即時作業系統</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">錢<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">錢昱瑋</div>
+                    
+                    <div class="alumni-thesis-text" title="以FPGA為基礎之多媒體卡控制器設計與支援USB下載之MP3隨身聽"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以FPGA為基礎之多媒體卡控制器設計與支援USB下載之MP3隨身聽</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">許<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">許勝一</div>
+                    
+                    <div class="alumni-thesis-text" title="一對七多功能具有ATA介面之快閃記憶卡燒錄器的電路設計與實現及在卡片資訊結構實現方法之改良"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>一對七多功能具有ATA介面之快閃記憶卡燒錄器的電路設計與實現及在卡片資訊結構實現方法之改良</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊雅容</div>
+                    
+                    <div class="alumni-thesis-text" title="低記憶體使用量零樹編解碼晶片設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>低記憶體使用量零樹編解碼晶片設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">王<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">王志雄</div>
+                    
+                    <div class="alumni-thesis-text" title="使用內嵌指令式離散小波轉換與反轉換硬體設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>使用內嵌指令式離散小波轉換與反轉換硬體設計</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_89">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">蘇<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蘇崇彥</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>台灣師範大學</div>
+                    <div class="alumni-thesis-text" title="低計算複雜度的增強型零樹編碼演算法之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>低計算複雜度的增強型零樹編碼演算法之研究</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">黃<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">黃仲賢</div>
+                    
+                    <div class="alumni-thesis-text" title="以低成本單晶片微電腦為基礎的高速光碟機長程傳動馬達之適應性模糊控制器之研製"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以低成本單晶片微電腦為基礎的高速光碟機長程傳動馬達之適應性模糊控制器之研製</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林家鋒</div>
+                    
+                    <div class="alumni-thesis-text" title="複合影像之分離與高倍率壓縮技術"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>複合影像之分離與高倍率壓縮技術</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">歐<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">歐陽志光</div>
+                    
+                    <div class="alumni-thesis-text" title="可攜式儲存裝置與電腦週邊介面整合控制器之研製"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>可攜式儲存裝置與電腦週邊介面整合控制器之研製</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">高<img src="https://drive.google.com/thumbnail?sz=w1000&id=1Z7W5bxv15E14XkNt-VoMkIYzqxSxEpmi" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">高龍毅</div>
+                    
+                    <div class="alumni-thesis-text" title="通用序列匯流排的快閃記憶卡\SmartMeida讀卡機設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>通用序列匯流排的快閃記憶卡\SmartMeida讀卡機設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張銘浚</div>
+                    
+                    <div class="alumni-thesis-text" title="無需除法器及低記憶體使用率的適應性多符號算術編解碼晶片設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>無需除法器及低記憶體使用率的適應性多符號算術編解碼晶片設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">簡<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">簡志清</div>
+                    
+                    <div class="alumni-thesis-text" title="FPGA-BasedSDRAM控制器之電路設計與實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>FPGA-BasedSDRAM控制器之電路設計與實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">李<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">李嘉雯</div>
+                    
+                    <div class="alumni-thesis-text" title=""><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_88">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">莊<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">莊志鴻</div>
+                    <div class="small font-weight-bold text-dark mt-1"><i class="fas fa-briefcase mr-1 text-muted"></i>新思科技</div>
+                    <div class="alumni-thesis-text" title="以WWMS法做車牌字元辨識"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以WWMS法做車牌字元辨識</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">潘<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">潘健成</div>
+                    
+                    <div class="alumni-thesis-text" title="快閃記憶體式硬碟機控制器之完整系統設計與實現"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>快閃記憶體式硬碟機控制器之完整系統設計與實現</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=1EEuAhxmHHOeOmr7xuzU_TnKcdEOk2xCn" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林欣平</div>
+                    
+                    <div class="alumni-thesis-text" title="車牌字元粹取"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>車牌字元粹取</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">楊<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">楊英霆</div>
+                    
+                    <div class="alumni-thesis-text" title="二維離散小波轉換晶片之設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>二維離散小波轉換晶片之設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">鄭<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">鄭昆豐</div>
+                    
+                    <div class="alumni-thesis-text" title="以小波轉換為基礎的音訊處理系統之週邊電路設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以小波轉換為基礎的音訊處理系統之週邊電路設計</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_87">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                <div class="row"><div class="col-12"><h6 class="text-primary font-weight-bold border-bottom pb-2 mb-3">博士班 PhD</h6></div>
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">蘇<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蘇玉玲</div>
+                    
+                    <div class="alumni-thesis-text" title="小波轉換應用在隨鱁T號的定態化、恆均化與自我相似特性之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>小波轉換應用在隨鱁T號的定態化、恆均化與自我相似特性之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-3 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-primary border border-primary">徐<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">徐宏昇</div>
+                    
+                    <div class="alumni-thesis-text" title="利用最佳量化器、改良式冗長編碼與碎形理論之小波轉換影像壓縮法"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>利用最佳量化器、改良式冗長編碼與碎形理論之小波轉換影像壓縮法</div>
+                </div>
+                </div>
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林崇仰</div>
+                    
+                    <div class="alumni-thesis-text" title="指紋影像辨識和影像壓縮及指紋在碎形上的分析"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>指紋影像辨識和影像壓縮及指紋在碎形上的分析</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林珮瑩</div>
+                    
+                    <div class="alumni-thesis-text" title="多頻帶混合樹之音訊編碼"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>多頻帶混合樹之音訊編碼</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林文隆</div>
+                    
+                    <div class="alumni-thesis-text" title="以小波轉換為基礎的彩色文件圖文分割與高倍率影像壓縮法之研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>以小波轉換為基礎的彩色文件圖文分割與高倍率影像壓縮法之研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">殷<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">殷重瑞</div>
+                    
+                    <div class="alumni-thesis-text" title="DSP-Based影像處理電路之設計與其在彩色影像壓縮上的應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>DSP-Based影像處理電路之設計與其在彩色影像壓縮上的應用</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_86">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">胡<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">胡益強</div>
+                    
+                    <div class="alumni-thesis-text" title="小波轉換與改良式編碼法在影像壓縮方面的應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>小波轉換與改良式編碼法在影像壓縮方面的應用</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_85">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">張<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">張堯敦</div>
+                    
+                    <div class="alumni-thesis-text" title="類神經網路應用於混沌系統的系統辨識及直流馬達控制器之設計"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>類神經網路應用於混沌系統的系統辨識及直流馬達控制器之設計</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">蔡<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">蔡芳助</div>
+                    
+                    <div class="alumni-thesis-text" title="高倍速光碟機長程傳動馬達的模糊伺服控制及模糊系統應用於混沌系統的判別"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>高倍速光碟機長程傳動馬達的模糊伺服控制及模糊系統應用於混沌系統的判別</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_84">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">潘<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">潘欣長</div>
+                    
+                    <div class="alumni-thesis-text" title="運用以類神經網路為基礎的卡門濾波器模式化混沌系統"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>運用以類神經網路為基礎的卡門濾波器模式化混沌系統</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="pane-yr_83">
+            <div class="p-4 bg-white border rounded shadow-sm">
+                
+                <div class="row mt-3"><div class="col-12"><h6 class="text-muted font-weight-bold border-bottom pb-2 mb-3">碩士班 Master</h6></div>
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">林<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">林耀中</div>
+                    
+                    <div class="alumni-thesis-text" title="互關訊息於非線性估計之探討"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>互關訊息於非線性估計之探討</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">周<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">周延平</div>
+                    
+                    <div class="alumni-thesis-text" title="小波轉換應用於碎形圖、影像編碼及類神經網路判別混沌系統的研究"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>小波轉換應用於碎形圖、影像編碼及類神經網路判別混沌系統的研究</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">陶<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">陶有福</div>
+                    
+                    <div class="alumni-thesis-text" title="運用功率譜估測法及類神經網來做混沌系統識別"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>運用功率譜估測法及類神經網來做混沌系統識別</div>
+                </div>
+                
+                <div class="col-6 col-md-2 text-center mb-5">
+                    <div class="alumni-avatar-circle bg-secondary ">韋<img src="https://drive.google.com/thumbnail?sz=w1000&id=" onerror="this.style.display='none';"></div>
+                    <div class="font-weight-bold text-dark" style="font-size: 1rem;">韋仁</div>
+                    
+                    <div class="alumni-thesis-text" title="小波轉換及其在混沌信號上之應用"><i class="fas fa-book mr-1 text-muted" style="font-size:0.8em;"></i>小波轉換及其在混沌信號上之應用</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+        </div>
+    </section>
+    
+
+      <footer class="text-center py-5 text-muted" style="border-top:1px solid #eee;">
+          <div class="mb-3">
+              <img src="assets/brand/logo.jpg" alt="Lab Logo" style="height: 60px; width: auto; opacity: 0.9;">
+          </div>
+          &copy; 2026 CSSP Laboratory, NYCU. All rights reserved.
+      </footer> 
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    

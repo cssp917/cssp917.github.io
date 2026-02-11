@@ -1,0 +1,549 @@
+
+    <!doctype html>
+    <html lang="zh-TW">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CSSP Lab - Publications & Resources</title>
+      
+      <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+      <style>
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; color: #222; padding-top: 70px; }
+        h3, h4 { font-weight: 700; margin-bottom: 30px; letter-spacing: -0.5px; }
+        .section-padding { padding: 60px 0; }
+        .bg-light-gray { background-color: #f9f9f9; }
+        a { color: #000; transition: color 0.2s; }
+        a:hover { color: #555; text-decoration: none; }
+
+        /* 導覽列 Active 樣式 */
+        .navbar-nav .nav-item.active .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+            border-bottom: 2px solid #000;
+        }
+        .navbar-nav .nav-link {
+            margin: 0 10px;
+            color: #555;
+        }
+
+        /* 校友頭像樣式 */
+        .alumni-avatar-circle {
+            width: 85px; height: 85px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            color: white; font-weight: bold; font-size: 1.6rem;
+            margin: 0 auto 15px;
+            background-color: #6c757d;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .alumni-avatar-circle img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            position: absolute; top: 0; left: 0;
+            z-index: 2;
+        }
+        .alumni-thesis-text {
+            display: block; overflow: visible; text-overflow: clip;
+            min-height: 3em; line-height: 1.5; font-size: 0.75rem;
+            color: #777; margin-top: 5px; text-align: left; padding: 0 5px;
+            word-break: break-all;
+        }
+
+        /* 輪播樣式 */
+        .carousel-item { height: 400px; background-color: #333; }
+        .carousel-item img { width: 100%; height: 100%; object-fit: contain; opacity: 0.9; }
+        .carousel-caption { background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px; }
+
+        /* 論文列表樣式 */
+        .pub-item { border-left: 3px solid #eee; transition: all 0.2s; }
+        .pub-item:hover { border-left: 3px solid #007bff; background: #f8f9fa; }
+        .pub-img-box { width: 160px; height: 100px; background: #eee; flex-shrink: 0; overflow: hidden; border-radius: 4px; }
+        .pub-img-box img { width: 100%; height: 100%; object-fit: contain; background-color: #f8f9fa; }
+        
+        /* 照片畫廊樣式 */
+        .gallery-img { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; transition: transform 0.2s; }
+        .gallery-img:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* 媒體卡片樣式 */
+        .media-card { transition: transform 0.2s; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .media-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        @media (max-width: 768px) { .carousel-item { height: 250px; } .pub-img-box { display: none; } }
+      </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+      
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #fff; border-bottom: 1px solid #eee;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" style="font-weight: 700; font-size: 1.5rem;">CSSP Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto"><li class="nav-item "><a class="nav-link" href="index.html">首頁 Home</a></li><li class="nav-item "><a class="nav-link" href="members.html">成員 Members</a></li><li class="nav-item "><a class="nav-link" href="courses.html">課程 Courses</a></li><li class="nav-item "><a class="nav-link" href="gallery.html">活動剪影 Gallery</a></li><li class="nav-item active"><a class="nav-link" href="resources.html">成果與資源 Resources</a></li></ul>
+        </div>
+      </div>
+    </nav>
+    
+      
+    <section class="section-padding bg-light-gray">
+        <div class="container">
+            
+            <div class="mb-5">
+                <h3>精選論文 <small class="text-muted" style="font-size:0.6em">Selected Publications</small></h3>
+                
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Chiu2024TIM.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Video-Based Contactless Detection of Sleep Apnea With Deep-Learning Model
+                </h5>
+                <div class="text-muted mb-1 small">Li-Wen Chiu, Yang-Ren Chou, Yi-Chiao Wu, Meng-Liang Chung, <b>Bing-Fei Wu</b>*, Kun-Ta Chou</div>
+                <div class="text-info font-italic small mb-2">IEEE Transactions on Instrumentation and Measurement (T-IM) (2024)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10663717" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Tseng2024JBHI.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    <span class="badge badge-warning text-white mr-2">Highlight</span>
+                    A Real-Time Contact-Free Atrial Fibrillation Detection System for Mobile Devices
+                </h5>
+                <div class="text-muted mb-1 small">Chih-Wei Tseng, <b>Bing-Fei Wu</b>*, Yu Sun</div>
+                <div class="text-info font-italic small mb-2">IEEE Journal of Biomedical and Health Informatics (J-BHI) (2024)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10582296" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2024JBHI.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Contact-Free Atrial Fibrillation Screening With Attention Network
+                </h5>
+                <div class="text-muted mb-1 small">Yi-Chiao Wu, Chun-Hsien Lin, Li-Wen Chiu, <b>Bing-Fei Wu</b>, Meng-Liang Chung, Sung-Chun Tang, Yu Sun*</div>
+                <div class="text-info font-italic small mb-2">IEEE Journal of Biomedical and Health Informatics (J-BHI) (2024)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10449359" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Chiu2023TIM.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Deep-Learning-Based Remote Photoplethysmography Measurement in Driving Scenarios With Color and Near-Infrared Images
+                </h5>
+                <div class="text-muted mb-1 small">Li-Wen Chiu, Yang-Ren Chou, Yi-Chiao Wu, <b>Bing-Fei Wu</b>*</div>
+                <div class="text-info font-italic small mb-2">IEEE Transactions on Instrumentation and Measurement (T-IM) (2023)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10301524" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Lin2023SciRep.png" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Identification of tophi in ultrasound imaging based on transfer learning and clinical practice
+                </h5>
+                <div class="text-muted mb-1 small">Tzu-Min Lin, Hsiang-Yen Lee, Ching-Kuei Chang, Ke-Hung Lin, Chi-Ching Chang, <b>Bing-Fei Wu</b>, Syu-Jyun Peng*</div>
+                <div class="text-info font-italic small mb-2">Scientific reports (SciRep) (2023)</div>
+                <a href="https://www.nature.com/articles/s41598-023-39508-5" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2023Sensors.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Peripheral Oxygen Saturation Measurement Using an RGB Camera
+                </h5>
+                <div class="text-muted mb-1 small">Bing-Jhang Wu, <b>Bing-Fei Wu</b>*, You-Cheng Dong, Hsiang-Chun Lin, Ping-Hung Li</div>
+                <div class="text-info font-italic small mb-2">IEEE Sensors Journal (2023)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10151779" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2023TIM_Motion.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Motion Robust Remote Photoplethysmography Measurement During Exercise for Contactless Physical Activity Intensity Detection
+                </h5>
+                <div class="text-muted mb-1 small">Yi-Chiao Wu, Li-Wen Chiu, <b>Bing-Fei Wu</b>*, Linda Li-Chuan Lin, Tsai-Hsuan Ho, Meng-Liang Chung, Shou-Fang Wu</div>
+                <div class="text-info font-italic small mb-2">IEEE Transactions on Instrumentation and Measurement (T-IM) (2023)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10068306" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2023TAffC.png" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Recognizing, Fast and Slow: Complex Emotion Recognition With Facial Expression Detection and Remote Physiological Measurement
+                </h5>
+                <div class="text-muted mb-1 small">Yi-Chiao Wu, Li-Wen Chiu, Chun-Chih Lai, <b>Bing-Fei Wu</b>*, Sunny SJ Lin</div>
+                <div class="text-info font-italic small mb-2">IEEE Transactions on Affective Computing (T-AffC) (2023)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10064050" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2023TIM_BP.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Camera-Based Blood Pressure Estimation via Windkessel Model and Waveform Features
+                </h5>
+                <div class="text-muted mb-1 small">Bing-Jhang Wu, <b>Bing-Fei Wu</b>*, Chi-Po Hsu</div>
+                <div class="text-info font-italic small mb-2">IEEE Transactions on Instrumentation and Measurement (TIM) (2023)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9963577" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2023JBHI.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Motion-Robust Atrial Fibrillation Detection Based on Remote-Photoplethysmography
+                </h5>
+                <div class="text-muted mb-1 small"><b>Bing-Fei Wu</b>, Bing-Jhang Wu*, Shao-En Cheng, Yu Sun, Meng-Liang Chung</div>
+                <div class="text-info font-italic small mb-2">IEEE Journal of Biomedical and Health Informatics (J-BHI) (2023)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9769908" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Lin2022Neuro.png" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Mitigating Domain Mismatch in Face Recognition Using Style Matching
+                </h5>
+                <div class="text-muted mb-1 small">Chun-Hsien Lin*, <b>Bing-Fei Wu</b>, Chi-Po Hsu</div>
+                <div class="text-info font-italic small mb-2">Neurocomputing (2022)</div>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0925231222001527" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Hsu2022KBS.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Broad-Learning Recurrent Hermite Neural Control for Unknown Nonlinear Systems
+                </h5>
+                <div class="text-muted mb-1 small">Chun-Fei Hsu*, Bo-Rui Chen, <b>Bing-Fei Wu</b></div>
+                <div class="text-info font-italic small mb-2">Knowledge-Based Systems (KBS) (2022)</div>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0950705122000831" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2022TIM_Face.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    A Facial-Image-Based Blood Pressure Measurement System Without Calibration
+                </h5>
+                <div class="text-muted mb-1 small"><b>Bing-Fei Wu</b>, Bing-Jhang Wu*, Bing-Ruei Tsai, Chi-Po Hsu</div>
+                <div class="text-info font-italic small mb-2">IEEE Transactions on Instrumentation and Measurement (TIM) (2022)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9751737" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Wu2022TIM_CompNet.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    A Compensation Network With Error Mapping for Robust Remote Photoplethysmography in Noise-Heavy Conditions
+                </h5>
+                <div class="text-muted mb-1 small"><b>Bing-Fei Wu</b>, Yi-Chiao Wu*, Yi-Wei Chou</div>
+                <div class="text-info font-italic small mb-2">IEEE Transactions on Instrumentation and Measurement (TIM) (2022)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9676507" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Sun2022SciRep.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Contactless Facial Video Recording With Deep Learning Models for the Detection of Atrial Fibrillation
+                </h5>
+                <div class="text-muted mb-1 small">Yu Sun, Yin-Yin Yang, Bing-Jhang Wu, Po-Wei Huang, Shao-En Cheng, <b>Bing-Fei Wu</b>*, Chun-Chang Chen</div>
+                <div class="text-info font-italic small mb-2">Scientific Reports (SciRep) (2022)</div>
+                <a href="https://www.nature.com/articles/s41598-021-03453-y" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Lin2021Neuro.jpg" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    Deep Representation Alignment Network for Pose-Invariant Face Recognition
+                </h5>
+                <div class="text-muted mb-1 small">Chun-Hsien Lin*, Wei-Jia Huang, <b>Bing-Fei Wu</b></div>
+                <div class="text-info font-italic small mb-2">Neurocomputing (2021)</div>
+                <a href="https://www.sciencedirect.com/science/article/pii/S092523122101300X" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+        <div class="media mb-4 p-3 pub-item bg-white rounded">
+            <div class="pub-img-box mr-4 border">
+                <img src="assets/img/Huang2020JBHI.png" alt="Paper Image">
+            </div>
+            <div class="media-body">
+                <h5 class="mt-0 font-weight-bold" style="font-size: 1.1rem;">
+                    
+                    A Heart Rate Monitoring Framework for Real-World Drivers Using Remote Photoplethysmography
+                </h5>
+                <div class="text-muted mb-1 small">Po-Wei Huang*, Bing-Jhang Wu, <b>Bing-Fei Wu</b></div>
+                <div class="text-info font-italic small mb-2">IEEE Journal of Biomedical and Health Informatics (J-BHI) (2021)</div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/9205299" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Paper</a>
+            </div>
+        </div>
+        
+            </div>
+
+            <hr class="my-5">
+
+            <div class="mb-5">
+                <h3>媒體報導與影音 <small class="text-muted" style="font-size:0.6em">Media & Talks</small></h3>
+                <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://www.instagram.com/p/DN9qUIVk0RC/" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="assets/img/ig2025wa_people.png" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fab fa-instagram text-primary mr-1"></i> instagram | 2025/08/30
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://www.instagram.com/p/DN9qUIVk0RC/" target="_blank" class="text-dark" style="text-decoration: none;">【產業人物 Wa-People】Podcast EP73 十年深耕車用電子...鉅怡智慧榮獲美國FDA雙重認證</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://www.youtube.com/watch?v=Ph9dnieWyJc" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://img.youtube.com/vi/Ph9dnieWyJc/mqdefault.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fab fa-youtube text-danger mr-1"></i> YouTube | 2025/08/07
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://www.youtube.com/watch?v=Ph9dnieWyJc" target="_blank" class="text-dark" style="text-decoration: none;">專訪 2025 傑出生技獎 年度產業創新獎 鉅怡智慧創辦人 吳炳飛講座教授</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://www.youtube.com/watch?v=WeVgkDu_A7U" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://img.youtube.com/vi/WeVgkDu_A7U/mqdefault.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fab fa-youtube text-danger mr-1"></i> YouTube | 2025/07/02
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://www.youtube.com/watch?v=WeVgkDu_A7U" target="_blank" class="text-dark" style="text-decoration: none;">陽明交大2025年傑出校友 專訪影片｜吳炳飛</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://www.businesstoday.com.tw/article/category/183015/post/202408210010/?utm_source=Yahoo&utm_medium=news&utm_campaign=240821" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/163249/KENS3062.jpeg_1140x855.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fas fa-newspaper text-info mr-1"></i> website | 2024/08/21
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://www.businesstoday.com.tw/article/category/183015/post/202408210010/?utm_source=Yahoo&utm_medium=news&utm_campaign=240821" target="_blank" class="text-dark" style="text-decoration: none;">大學教授創業「電視幫你量血壓」，獲聯發科、台杉等A咖投資！台灣新創家數10年爆增2倍，4大亮點一次看</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://www.etop.org.tw/index.php?d=epp&c=epp13911&m=show&id=433" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="http://www.etop.org.tw/uploads/epp/5868260626d8c5f0ab41478ef3b6aa3a.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fas fa-newspaper text-info mr-1"></i> website | 2021/05/10
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://www.etop.org.tw/index.php?d=epp&c=epp13911&m=show&id=433" target="_blank" class="text-dark" style="text-decoration: none;">吳炳飛講座教授：教不在巧，有心則靈；研不在深，有用則名</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://meet.bnext.com.tw/articles/view/46721?" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://image-cdn.learnin.tw/bnextmedia/image/album/2020-07/img-1595305780-78999.jpg?w=1600&output=webp" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fas fa-newspaper text-info mr-1"></i> website | 2020/07/28
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://meet.bnext.com.tw/articles/view/46721?" target="_blank" class="text-dark" style="text-decoration: none;">鉅怡智慧打造非接觸影像生理訊號偵測系統，聚焦智慧健康管理、智慧金融、疫情隔離多元應用</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://news.ltn.com.tw/news/Taipei/breakingnews/2817533" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://img.ltn.com.tw/Upload/news/600/2019/06/10/2817533_3.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fas fa-newspaper text-info mr-1"></i> website | 2019/06/10
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://news.ltn.com.tw/news/Taipei/breakingnews/2817533" target="_blank" class="text-dark" style="text-decoration: none;">獨步全球 交大團隊AI「看」人臉測心跳</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://www.chinatimes.com/realtimenews/20190610001804-260508?chdtv" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://images.chinatimes.com/newsphoto/2019-06-10/1024/20190610001805.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fas fa-newspaper text-info mr-1"></i> website | 2019/06/10
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://www.chinatimes.com/realtimenews/20190610001804-260508?chdtv" target="_blank" class="text-dark" style="text-decoration: none;">教授技術創業 新創公司估值達5億元</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://www.ctee.com.tw/news/20190526700088-430502" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://images.ctee.com.tw/newsphoto/2019-05-26/1024/20190526700089.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fas fa-newspaper text-info mr-1"></i> website | 2019/05/26
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://www.ctee.com.tw/news/20190526700088-430502" target="_blank" class="text-dark" style="text-decoration: none;">吳炳飛鉅怡智慧雙心法：既要無感又與眾不同</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 media-card">
+                <a href="https://excellentteacher.moe.edu.tw/2017/teacher3_65.htm" target="_blank" style="overflow: hidden; height: 180px; display: block;">
+                    <img class="card-img-top" src="https://excellentteacher.moe.edu.tw/2017/images/teacher3_065.jpg" alt="Thumbnail" style="height: 100%; width: 100%; object-fit: cover;">
+                </a>
+                <div class="card-body">
+                    <div class="small text-muted mb-1">
+                        <i class="fas fa-newspaper text-info mr-1"></i> website | 2017/
+                    </div>
+                    <h6 class="card-title font-weight-bold">
+                        <a href="https://excellentteacher.moe.edu.tw/2017/teacher3_65.htm" target="_blank" class="text-dark" style="text-decoration: none;">教育部良師興國</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div>
+                <h3>常用資源連結 <small class="text-muted" style="font-size:0.6em">External Links</small></h3>
+                <ul class="list-unstyled row">
+                    <div class="col-md-6"><li class="mb-2"><a href="https://www.nycu.edu.tw/" target="_blank" class="text-dark"><i class="fas fa-external-link-alt mr-2 text-muted"></i>國立陽明交通大學 (NYCU)</a></li><li class="mb-2"><a href="https://ieeexplore.ieee.org/" target="_blank" class="text-dark"><i class="fas fa-external-link-alt mr-2 text-muted"></i>IEEE Xplore</a></li><li class="mb-2"><a href="https://scholar.google.com/" target="_blank" class="text-dark"><i class="fas fa-external-link-alt mr-2 text-muted"></i>Google Scholar</a></li><li class="mb-2"><a href="https://drive.google.com/drive/folders/141FJXSjk3v-vb_CxveQFMri6FY5JqaCZ?usp=sharing" target="_blank" class="text-dark"><i class="fas fa-external-link-alt mr-2 text-muted"></i>給新生的大禮包(請使用實驗室專屬帳號)</a></li></div>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    
+
+      <footer class="text-center py-5 text-muted" style="border-top:1px solid #eee;">
+          <div class="mb-3">
+              <img src="assets/brand/logo.jpg" alt="Lab Logo" style="height: 60px; width: auto; opacity: 0.9;">
+          </div>
+          &copy; 2026 CSSP Laboratory, NYCU. All rights reserved.
+      </footer> 
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    

@@ -1,0 +1,520 @@
+
+    <!doctype html>
+    <html lang="zh-TW">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Design and Simulation of Control Systems - CSSP Lab</title>
+
+      <!-- Icons + Bootstrap 4 -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+      <style>
+        :root {
+            --bg: #0b1220;
+            --panel: rgba(255, 255, 255, 0.86);
+            --panel-solid: #ffffff;
+            --text: #0f172a;
+            --muted: #64748b;
+            --line: rgba(15, 23, 42, 0.08);
+            --shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+            --shadow-soft: 0 6px 18px rgba(2, 6, 23, 0.10);
+            --r: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(1000px 600px at 10% -10%, rgba(59, 130, 246, 0.25), transparent 60%),
+                radial-gradient(900px 600px at 90% 0%, rgba(168, 85, 247, 0.22), transparent 60%),
+                radial-gradient(1100px 700px at 50% 120%, rgba(16, 185, 129, 0.18), transparent 55%),
+                #f6f7fb;
+        }
+
+        /* --- Navbar：維持原本「小螢幕也展開」邏輯，但讓視覺更乾淨 --- */
+        .navbar {
+            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.75) !important;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .navbar-toggler { display: none !important; }
+        .navbar-collapse { display: flex !important; flex-basis: auto; }
+        .navbar-nav { flex-direction: row; }
+
+        /* --- Hero --- */
+        .hero {
+            position: relative;
+            padding-top: 92px; /* 預留 navbar */
+            padding-bottom: 28px;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(1000px 520px at 10% 10%, rgba(59, 130, 246, 0.35), transparent 60%),
+                radial-gradient(900px 520px at 85% 10%, rgba(168, 85, 247, 0.28), transparent 60%),
+                linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            padding: 26px 0 10px 0;
+        }
+        .hero-kicker {
+            font-size: 0.82rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: rgba(15, 23, 42, 0.55);
+            font-weight: 600;
+        }
+        .hero-tag {
+            border-radius: 999px;
+            padding: 0.35rem 0.7rem;
+        }
+        .hero-title {
+            font-weight: 800;
+            font-size: 2.4rem;
+            line-height: 1.15;
+            color: #0b1220;
+            margin-top: 6px;
+        }
+        .hero-subtitle {
+            font-weight: 500;
+            font-size: 1.15rem;
+            color: rgba(15, 23, 42, 0.68);
+            margin-top: 8px;
+        }
+        .hero-divider {
+            width: 56px;
+            height: 4px;
+            border-radius: 999px;
+            margin: 18px 0 18px 0;
+        }
+        .hero-meta .meta-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .hero-meta .meta-ic {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.75);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            box-shadow: 0 6px 14px rgba(2,6,23,0.08);
+            color: rgba(15, 23, 42, 0.72);
+            flex-shrink: 0;
+        }
+        .hero-meta .meta-txt {
+            color: rgba(15, 23, 42, 0.72);
+        }
+
+        /* --- Cards / Sections --- */
+        .section-box {
+            background: var(--panel);
+            border: 1px solid rgba(255,255,255,0.55);
+            box-shadow: var(--shadow-soft);
+            border-radius: var(--r);
+            padding: 26px;
+            margin-bottom: 22px;
+        }
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.06);
+            color: rgba(15, 23, 42, 0.75);
+        }
+        h4 {
+            font-weight: 800;
+            font-size: 1.15rem;
+            margin: 0;
+            color: #0f172a;
+        }
+
+        /* --- List interactions --- */
+        .list-group-item-action:hover {
+            background-color: rgba(2, 6, 23, 0.02);
+            color: #0b5ed7;
+        }
+
+        /* --- Announcement --- */
+        .announcement-item {
+            border: 0 !important;
+            background: transparent;
+        }
+        .bullet {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            display: inline-block;
+            background: #f59e0b; /* fallback */
+        }
+        .text-warning.bullet { background: #f59e0b; }
+        .text-info.bullet { background: #0ea5e9; }
+        .text-primary.bullet { background: #3b82f6; }
+        .text-danger.bullet { background: #ef4444; }
+        .text-success.bullet { background: #10b981; }
+
+        /* --- Multi-column homework/quiz --- */
+        .multi-column-container {
+            column-count: 2;
+            column-gap: 1.6rem;
+        }
+        .grid-item {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .grid-item:last-child { border-bottom: 0; }
+        @media (max-width: 768px) {
+            .multi-column-container { column-count: 1; }
+            .hero-title { font-size: 2.0rem; }
+        }
+
+        /* --- Grading --- */
+        .grading-item {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .grading-item:last-child { border-bottom: 0; }
+        .progress-thin {
+            height: 10px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.07);
+        }
+        .progress-thin .progress-bar {
+            border-radius: 999px;
+        }
+        .badge-soft {
+            background: rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            color: rgba(15, 23, 42, 0.78);
+            font-weight: 700;
+            padding: 0.35rem 0.55rem;
+            border-radius: 999px;
+        }
+
+        /* --- TA cards --- */
+        .ta-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 14px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.78);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            box-shadow: 0 10px 20px rgba(2,6,23,0.06);
+        }
+        .avatar-circle {
+            width: 42px; height: 42px;
+            color: #fff;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.05rem;
+            flex-shrink: 0;
+            box-shadow: 0 6px 14px rgba(2,6,23,0.15);
+        }
+        .ta-info {
+            min-width: 0;
+        }
+
+        /* --- Resources --- */
+        .resource-list {
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        .resource-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            text-decoration: none !important;
+        }
+        .resource-item:hover .resource-title {
+            text-decoration: underline;
+        }
+        .resource-item:last-child { border-bottom: 0; }
+        .resource-title {
+            font-weight: 650;
+            color: #0f172a;
+        }
+        .link-title {
+            color: #0b5ed7;
+        }
+        .divider-dashed {
+            width: 100%;
+            margin: 10px 0 8px 0;
+            border-top: 1px dashed rgba(15, 23, 42, 0.18);
+        }
+        .fixed-width-icon { width: 22px; text-align: center; }
+
+        /* --- Empty State --- */
+        .empty-state {
+            border: 1px dashed rgba(15, 23, 42, 0.18);
+            border-radius: 14px;
+            padding: 16px;
+            background: rgba(255,255,255,0.55);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .empty-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.06);
+            color: rgba(15, 23, 42, 0.7);
+            flex-shrink: 0;
+        }
+        .empty-text {
+            color: rgba(15, 23, 42, 0.65);
+            font-weight: 600;
+        }
+
+        /* --- Sidebar sticky (大螢幕更好用) --- */
+        @media (min-width: 992px) {
+            .sidebar-sticky {
+                position: sticky;
+                top: 92px;
+            }
+        }
+
+        /* --- Footer --- */
+        footer {
+            color: rgba(15, 23, 42, 0.6);
+        }
+      </style>
+    </head>
+    <body>
+
+      
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="border-bottom: 1px solid #eee;">
+      <div class="container">
+        <a class="navbar-brand" href="../../../courses.html" style="font-weight: 700;">&larr; 回首頁 (Back to Lab)</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><span class="nav-link" style="font-weight: bold;">Design and Simulation of Control Systems</span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+      
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-inner">
+            <div class="d-flex flex-wrap align-items-center mb-3">
+                <div class="hero-kicker">2025 Spring (114學年度下學期)</div>
+                <span class="badge badge-primary hero-tag ml-2">電機系</span>
+            </div>
+
+            <div class="hero-title">控制系統設計</div>
+            <div class="hero-subtitle">Design and Simulation of Control Systems</div>
+
+            <div class="hero-divider bg-primary"></div>
+
+            <div class="row hero-meta">
+                <div class="col-md-6 mb-2 mb-md-0">
+                    <div class="meta-item">
+                        <div class="meta-ic"><i class="fas fa-clock"></i></div>
+                        <div class="meta-txt"><strong>時間地點：</strong> M2W34 @ 工程五館 623 室 (EE623)</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-ic"><i class="fas fa-book"></i></div>
+                        <div class="meta-txt"><strong>先修課程：</strong> 自動控制系統、線性代數、訊號與系統</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="meta-item">
+                        <div class="meta-ic"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="meta-txt"><strong>教師 Office Hour：</strong> Tue. 19:00 - 21:00 at EE773</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-ic"><i class="fas fa-user-friends"></i></div>
+                        <div class="meta-txt"><strong>助教 Office Hour：</strong> Wed. 19:00 - 21:00 at EE917</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+      <div class="container" style="margin-bottom: 48px;">
+        <div class="row">
+            <main class="col-lg-8">
+
+                <section class="section-box">
+                    <div class="section-head">
+                        <div class="section-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h4>公告 (Announcement)</h4>
+                    </div>
+                    
+    <div class="empty-state">
+        <div class="empty-icon"><i class="fas fa-bullhorn"></i></div>
+        <div class="empty-text">目前尚無公告。</div>
+    </div>
+    
+                </section>
+
+                <section class="section-box">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="section-head mb-0">
+                            <div class="section-icon"><i class="fas fa-pencil-alt"></i></div>
+                            <h4>作業 (Homework)</h4>
+                        </div>
+                        <span class="badge badge-soft">0 assignments</span>
+                    </div>
+                    
+        <div class="alert alert-light border-0 mb-0" style="background: rgba(255,255,255,0.6);">
+            <div class="d-flex align-items-start">
+                <div class="mr-3 text-muted"><i class="fas fa-info-circle"></i></div>
+                <div class="text-muted">
+                    本學年暫無詳細列表。請參考
+                    <a href="https://e3.nycu.edu.tw" target="_blank">E3 平台</a>
+                    取得最新的作業與小考資訊。
+                </div>
+            </div>
+        </div>
+        
+                </section>
+
+                <section class="section-box">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="section-head mb-0">
+                            <div class="section-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <h4>小考 (Quiz)</h4>
+                        </div>
+                        <span class="badge badge-soft">0 quizzes</span>
+                    </div>
+                    
+        <div class="alert alert-light border-0 mb-0" style="background: rgba(255,255,255,0.6);">
+            <div class="d-flex align-items-start">
+                <div class="mr-3 text-muted"><i class="fas fa-info-circle"></i></div>
+                <div class="text-muted">
+                    本學年暫無詳細列表。請參考
+                    <a href="https://e3.nycu.edu.tw" target="_blank">E3 平台</a>
+                    取得最新的作業與小考資訊。
+                </div>
+            </div>
+        </div>
+        
+                </section>
+
+                <section class="section-box">
+                    <div class="section-head">
+                        <div class="section-icon"><i class="fas fa-book"></i></div>
+                        <h4>教科書 (Textbook)</h4>
+                    </div>
+                    <ul class="list-group list-group-flush"><li class="list-group-item px-0 border-0 d-flex align-items-start">  <i class="fas fa-book-open text-dark mr-3 mt-1"></i>  <div class="text-body">F. Golnaraghi and B. C. Kuo, <i>Automatic Control Systems</i>, 10th ed. New York, NY: McGraw-Hill Education, 2017.</div></li><li class="list-group-item px-0 border-0 d-flex align-items-start">  <i class="fas fa-book-open text-dark mr-3 mt-1"></i>  <div class="text-body">C. L. Phillips, H. T. Nagle, and A. Chakrabortty, <i>Digital Control System Analysis and Design</i>, 4th ed., Global Edition. Harlow, UK: Pearson Education Limited, 2015.</div></li></ul>
+                </section>
+
+            </main>
+
+            <aside class="col-lg-4">
+                <div class="sidebar-sticky">
+                    <section class="section-box">
+                        <div class="section-head">
+                            <div class="section-icon"><i class="fas fa-tasks"></i></div>
+                            <h4>評分標準 (Grading)</h4>
+                        </div>
+                        
+    <div class="empty-state">
+        <div class="empty-icon"><i class="fas fa-tasks"></i></div>
+        <div class="empty-text">本學期評分標準尚未公布，請以 E3 公告為準。</div>
+    </div>
+    
+                    </section>
+
+                    <section class="section-box">
+                        <div class="section-head">
+                            <div class="section-icon"><i class="fas fa-users"></i></div>
+                            <h4>課程助教 (TA)</h4>
+                        </div>
+                        
+    <div class="d-flex align-items-start mb-3">
+        <div class="mr-2 mt-1 text-danger"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="small text-muted">工程五館 917 室 (分機 54428)</div>
+    </div>
+    <div class='row'>
+        <div class="col-12 mb-3">
+            <div class="ta-card">
+                <div class="avatar-circle bg-secondary">李</div>
+                <div class="ta-info">
+                    <div class="font-weight-bold text-dark">李長鑫</div>
+                    <a href="mailto:jacky0970711835@gmail.com" class="small text-muted text-truncate d-block" title="jacky0970711835@gmail.com">jacky0970711835@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 mb-3">
+            <div class="ta-card">
+                <div class="avatar-circle bg-secondary">吳</div>
+                <div class="ta-info">
+                    <div class="font-weight-bold text-dark">吳欣諺</div>
+                    <a href="mailto:jamiepatty0315@gmail.com" class="small text-muted text-truncate d-block" title="jamiepatty0315@gmail.com">jamiepatty0315@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        </div>
+                    </section>
+
+                    
+    <section class="section-box">
+        <div class="section-head">
+            <div class="section-icon"><i class="fas fa-link"></i></div>
+            <h4 class="mb-0">相關資源 (Resources)</h4>
+        </div>
+        <div class="resource-list">
+            <a href="https://script.google.com/macros/s/AKfycbxP0Mi77MI6mYSEq_mxDavRtQaMv8tikTPVSC43ep0kzZi5TJ-RIPBVu1qfcAq6tqRV/exec" target="_blank" class="resource-item d-flex justify-content-between align-items-center">
+                <div class="text-truncate" style="max-width: 92%;">
+                    <i class="fas fa-external-link-alt text-danger mr-2 fixed-width-icon"></i>
+                    <span class="resource-title link-title">成績查詢(無痕開啟)</span>
+                    <span class="text-muted small ml-2 d-none d-sm-inline">— Grade Inquiry System</span>
+                </div>
+                <i class="fas fa-chevron-right text-muted small"></i>
+            </a>
+            </div>
+    </section>
+    
+                </div>
+            </aside>
+        </div>
+      </div>
+
+      <footer class="text-center py-5" style="border-top:1px solid rgba(15, 23, 42, 0.08);">
+          <div class="mb-3">
+              <img src="../../brand/logo.jpg" alt="Lab Logo" style="height: 56px; width: auto; opacity: 0.92;">
+          </div>
+          &copy; 2026 CSSP Laboratory, NYCU. All rights reserved.
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    </body>
+    </html>
+    

@@ -1,0 +1,15 @@
+# --- Python 相關 ---
+# 忽略 Python 編譯後的位元碼 (即你圖片中看到的 __pycache__ 資料夾)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- 作業系統與編輯器 ---
+# macOS 系統檔
+.DS_Store
+
+# Windows 系統檔
+Thumbs.db
+
+# VS Code 設定檔 (視個人需求，通常建議忽略)
+.vscode/

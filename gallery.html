@@ -1,0 +1,297 @@
+
+    <!doctype html>
+    <html lang="zh-TW">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CSSP Lab - Gallery</title>
+      
+      <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+      <style>
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; color: #222; padding-top: 70px; }
+        h3, h4 { font-weight: 700; margin-bottom: 30px; letter-spacing: -0.5px; }
+        .section-padding { padding: 60px 0; }
+        .bg-light-gray { background-color: #f9f9f9; }
+        a { color: #000; transition: color 0.2s; }
+        a:hover { color: #555; text-decoration: none; }
+
+        /* 導覽列 Active 樣式 */
+        .navbar-nav .nav-item.active .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+            border-bottom: 2px solid #000;
+        }
+        .navbar-nav .nav-link {
+            margin: 0 10px;
+            color: #555;
+        }
+
+        /* 校友頭像樣式 */
+        .alumni-avatar-circle {
+            width: 85px; height: 85px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            color: white; font-weight: bold; font-size: 1.6rem;
+            margin: 0 auto 15px;
+            background-color: #6c757d;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .alumni-avatar-circle img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            position: absolute; top: 0; left: 0;
+            z-index: 2;
+        }
+        .alumni-thesis-text {
+            display: block; overflow: visible; text-overflow: clip;
+            min-height: 3em; line-height: 1.5; font-size: 0.75rem;
+            color: #777; margin-top: 5px; text-align: left; padding: 0 5px;
+            word-break: break-all;
+        }
+
+        /* 輪播樣式 */
+        .carousel-item { height: 400px; background-color: #333; }
+        .carousel-item img { width: 100%; height: 100%; object-fit: contain; opacity: 0.9; }
+        .carousel-caption { background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px; }
+
+        /* 論文列表樣式 */
+        .pub-item { border-left: 3px solid #eee; transition: all 0.2s; }
+        .pub-item:hover { border-left: 3px solid #007bff; background: #f8f9fa; }
+        .pub-img-box { width: 160px; height: 100px; background: #eee; flex-shrink: 0; overflow: hidden; border-radius: 4px; }
+        .pub-img-box img { width: 100%; height: 100%; object-fit: contain; background-color: #f8f9fa; }
+        
+        /* 照片畫廊樣式 */
+        .gallery-img { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; transition: transform 0.2s; }
+        .gallery-img:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* 媒體卡片樣式 */
+        .media-card { transition: transform 0.2s; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .media-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        @media (max-width: 768px) { .carousel-item { height: 250px; } .pub-img-box { display: none; } }
+      </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+      
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #fff; border-bottom: 1px solid #eee;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" style="font-weight: 700; font-size: 1.5rem;">CSSP Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto"><li class="nav-item "><a class="nav-link" href="index.html">首頁 Home</a></li><li class="nav-item "><a class="nav-link" href="members.html">成員 Members</a></li><li class="nav-item "><a class="nav-link" href="courses.html">課程 Courses</a></li><li class="nav-item active"><a class="nav-link" href="gallery.html">活動剪影 Gallery</a></li><li class="nav-item "><a class="nav-link" href="resources.html">成果與資源 Resources</a></li></ul>
+        </div>
+      </div>
+    </nav>
+    
+      
+    <section class="section-padding">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3>實驗室活動剪影 <small class="text-muted" style="font-size:0.6em">Gallery</small></h3>
+            </div>
+            <ul class="nav nav-pills mb-4 justify-content-center" id="gallery-tab" role="tablist">
+                
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" href="#gallery-2025" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">2025</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="pill" href="#gallery-2024" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">2024</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="pill" href="#gallery-2022" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">2022</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="pill" href="#gallery-2015" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">2015</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="pill" href="#gallery-2013" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">2013</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="pill" href="#gallery-2012" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">2012</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="pill" href="#gallery-2004" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">2004</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link " data-toggle="pill" href="#gallery-1998" 
+               style="border-radius: 20px; margin: 0 5px; font-weight: 500;">1998</a>
+        </li>
+        
+            </ul>
+            <div class="tab-content">
+                
+        <div class="tab-pane fade show active" id="gallery-2025">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1Ae6ojjuO5LLWkSkB6-Z-cnpOP4f2yOIb" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Ae6ojjuO5LLWkSkB6-Z-cnpOP4f2yOIb" class="gallery-img" alt="917討論會 @ EE917" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">917討論會 @ EE917</div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=18SLQAqth93cRcpOrhUG5fMtPJq_5sWrQ" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=18SLQAqth93cRcpOrhUG5fMtPJq_5sWrQ" class="gallery-img" alt="團隊榮獲 NAVSIM v2 創新獎 @ ICCV 2025" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">團隊榮獲 NAVSIM v2 創新獎 @ ICCV 2025</div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1A4TNKI0TIl8rVe9TgMU1S1lV2m02ORRy" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1A4TNKI0TIl8rVe9TgMU1S1lV2m02ORRy" class="gallery-img" alt="老師慶生活動 @ EE773" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">老師慶生活動 @ EE773</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="gallery-2024">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=13aTDqmRvYKqMU65cUWRXg_hb4S-RdGcC" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=13aTDqmRvYKqMU65cUWRXg_hb4S-RdGcC" class="gallery-img" alt="實驗室聚餐 @ 新竹-愛華火鍋" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">實驗室聚餐 @ 新竹-愛華火鍋</div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1jRxrb62pIFfASK-1FdKkxQklckCZu-AP" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1jRxrb62pIFfASK-1FdKkxQklckCZu-AP" class="gallery-img" alt="新生迎新聚餐 @ 新竹-新天地美食館" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">新生迎新聚餐 @ 新竹-新天地美食館</div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1vZPlcmt0KKgQGES-xm1IUlYmwkB-xgs6" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1vZPlcmt0KKgQGES-xm1IUlYmwkB-xgs6" class="gallery-img" alt="老師慶生活動 @ EE773" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">老師慶生活動 @ EE773</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="gallery-2022">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=19kf_CwXAWFswIahhB87idMFQu1ZCiMtV" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=19kf_CwXAWFswIahhB87idMFQu1ZCiMtV" class="gallery-img" alt="老師慶生活動 @ EE723" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">老師慶生活動 @ EE723</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="gallery-2015">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1bRnbOI8-Ks1inHTYzwHW504182tf5A6Z" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1bRnbOI8-Ks1inHTYzwHW504182tf5A6Z" class="gallery-img" alt="實驗室尾牙聚餐" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">實驗室尾牙聚餐</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="gallery-2013">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1-Cz5Bj2Ksfqh7TZup_rDcgv_leQyL4jj" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1-Cz5Bj2Ksfqh7TZup_rDcgv_leQyL4jj" class="gallery-img" alt="研究生畢業照片" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">研究生畢業照片</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="gallery-2012">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1YuERApBNrMdTQZUi2OVDY7ZTP7KuX8fe" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YuERApBNrMdTQZUi2OVDY7ZTP7KuX8fe" class="gallery-img" alt="研究生畢業照片" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">研究生畢業照片</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="gallery-2004">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1A9oFGOgpN3zeyxvgyMKCzMyW25ShyUGS" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1A9oFGOgpN3zeyxvgyMKCzMyW25ShyUGS" class="gallery-img" alt="研究生畢業照片" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">研究生畢業照片</div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1ZyDai6ijmZY7wLHMIOIaeY6Ldhkgs54x" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZyDai6ijmZY7wLHMIOIaeY6Ldhkgs54x" class="gallery-img" alt="天籟之旅" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">天籟之旅</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade " id="gallery-1998">
+            <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="https://drive.google.com/thumbnail?sz=w1000&id=1bRKuTYcfLKKdPBXfTf-2M95dQaLUq42G" target="_blank" title="點擊查看大圖">
+                    <img src="https://drive.google.com/thumbnail?sz=w1000&id=1bRKuTYcfLKKdPBXfTf-2M95dQaLUq42G" class="gallery-img" alt="藥繕園出遊" 
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Image'">
+                </a>
+                <div class="text-center mt-2 small text-muted">藥繕園出遊</div>
+            </div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    
+
+      <footer class="text-center py-5 text-muted" style="border-top:1px solid #eee;">
+          <div class="mb-3">
+              <img src="assets/brand/logo.jpg" alt="Lab Logo" style="height: 60px; width: auto; opacity: 0.9;">
+          </div>
+          &copy; 2026 CSSP Laboratory, NYCU. All rights reserved.
+      </footer> 
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    

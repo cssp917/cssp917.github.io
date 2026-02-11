@@ -1,0 +1,280 @@
+
+    <!doctype html>
+    <html lang="zh-TW">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CSSP Lab - Courses</title>
+      
+      <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+      <style>
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; color: #222; padding-top: 70px; }
+        h3, h4 { font-weight: 700; margin-bottom: 30px; letter-spacing: -0.5px; }
+        .section-padding { padding: 60px 0; }
+        .bg-light-gray { background-color: #f9f9f9; }
+        a { color: #000; transition: color 0.2s; }
+        a:hover { color: #555; text-decoration: none; }
+
+        /* 導覽列 Active 樣式 */
+        .navbar-nav .nav-item.active .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+            border-bottom: 2px solid #000;
+        }
+        .navbar-nav .nav-link {
+            margin: 0 10px;
+            color: #555;
+        }
+
+        /* 校友頭像樣式 */
+        .alumni-avatar-circle {
+            width: 85px; height: 85px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            color: white; font-weight: bold; font-size: 1.6rem;
+            margin: 0 auto 15px;
+            background-color: #6c757d;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .alumni-avatar-circle img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            position: absolute; top: 0; left: 0;
+            z-index: 2;
+        }
+        .alumni-thesis-text {
+            display: block; overflow: visible; text-overflow: clip;
+            min-height: 3em; line-height: 1.5; font-size: 0.75rem;
+            color: #777; margin-top: 5px; text-align: left; padding: 0 5px;
+            word-break: break-all;
+        }
+
+        /* 輪播樣式 */
+        .carousel-item { height: 400px; background-color: #333; }
+        .carousel-item img { width: 100%; height: 100%; object-fit: contain; opacity: 0.9; }
+        .carousel-caption { background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px; }
+
+        /* 論文列表樣式 */
+        .pub-item { border-left: 3px solid #eee; transition: all 0.2s; }
+        .pub-item:hover { border-left: 3px solid #007bff; background: #f8f9fa; }
+        .pub-img-box { width: 160px; height: 100px; background: #eee; flex-shrink: 0; overflow: hidden; border-radius: 4px; }
+        .pub-img-box img { width: 100%; height: 100%; object-fit: contain; background-color: #f8f9fa; }
+        
+        /* 照片畫廊樣式 */
+        .gallery-img { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; transition: transform 0.2s; }
+        .gallery-img:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* 媒體卡片樣式 */
+        .media-card { transition: transform 0.2s; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .media-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        @media (max-width: 768px) { .carousel-item { height: 250px; } .pub-img-box { display: none; } }
+      </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+      
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #fff; border-bottom: 1px solid #eee;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" style="font-weight: 700; font-size: 1.5rem;">CSSP Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto"><li class="nav-item "><a class="nav-link" href="index.html">首頁 Home</a></li><li class="nav-item "><a class="nav-link" href="members.html">成員 Members</a></li><li class="nav-item active"><a class="nav-link" href="courses.html">課程 Courses</a></li><li class="nav-item "><a class="nav-link" href="gallery.html">活動剪影 Gallery</a></li><li class="nav-item "><a class="nav-link" href="resources.html">成果與資源 Resources</a></li></ul>
+        </div>
+      </div>
+    </nav>
+    
+      
+    <section id="courses-full" class="section-padding">
+        <div class="container">
+             <h3>課程資訊 <small class="text-muted" style="font-size: 0.6em;">All Courses</small></h3>
+             
+    <ul class="nav nav-tabs" id="courseTabs" role="tablist" style="margin-bottom: 20px;">
+      <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#current" style="color:#333; font-weight:bold;">當前課程</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#archive" style="color:#777;">歷年課程</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="current"><div class="row">
+            <div class="col-md-6" style="margin-bottom: 20px;">
+                <div class="card h-100 shadow-sm" style="border: 1px solid #eee;">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">控制系統設計 (Design and Simulation of Control Systems)</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20030</h6>
+                        <p class="card-text">114 Spring - 學習控制系統之模擬, PID控制器設計、頻域分析與Lead-lag控制器設計。</p>
+                        <a href="assets/html/course/course_114_CSD.html" class="btn btn-sm btn-outline-primary">課程網頁</a>
+                    </div>
+                </div>
+            </div>
+            </div></div>
+      <div class="tab-pane fade" id="archive"><div id="accordionCourses">
+        <div class="card" style="margin-bottom: 5px; border: 1px solid #eee;">
+            <div class="card-header" id="heading_2ba68849" style="padding: 0; background-color: #fff;">
+                <h5 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" data-target="#collapse_2ba68849" style="color:#333; font-weight:bold; padding: 15px; text-decoration:none;">
+                        <i class="fas fa-calendar-alt mr-2 text-muted"></i> 114 學年度 (2025-2026)
+                        <i class="fas fa-chevron-down float-right mt-1 text-muted" style="font-size: 0.8em;"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapse_2ba68849" class="collapse" data-parent="#accordionCourses">
+                <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_114_ACS.html" style="font-weight:bold; color:#0056b3;">自動控制系統 (Automatic Control Systems)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20055</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">114 Fall - 學習控制理論與應用的基本處理技術。本課程為控制的基礎課程。</small>
+                </div>
+            </li>
+            </ul>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-bottom: 5px; border: 1px solid #eee;">
+            <div class="card-header" id="heading_09592e5d" style="padding: 0; background-color: #fff;">
+                <h5 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" data-target="#collapse_09592e5d" style="color:#333; font-weight:bold; padding: 15px; text-decoration:none;">
+                        <i class="fas fa-calendar-alt mr-2 text-muted"></i> 113 學年度 (2024-2025)
+                        <i class="fas fa-chevron-down float-right mt-1 text-muted" style="font-size: 0.8em;"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapse_09592e5d" class="collapse" data-parent="#accordionCourses">
+                <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_113_CSD.html" style="font-weight:bold; color:#0056b3;">控制系統設計 (Design and Simulation of Control Systems)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20030</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">113 Spring - 學習控制系統之模擬, PID控制器設計、頻域分析與Lead-lag控制器設計。</small>
+                </div>
+            </li>
+            
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_113_ACS.html" style="font-weight:bold; color:#0056b3;">自動控制系統 (Automatic Control Systems)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20055</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">113 Fall - 學習控制理論與應用的基本處理技術。本課程為控制的基礎課程。</small>
+                </div>
+            </li>
+            
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_113_DSP.html" style="font-weight:bold; color:#0056b3;">數位訊號處理 (Digital Signal Processing)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-success mr-1" style="font-weight:normal; font-size:0.8em;">電機專</span> EEDE30058</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">113 Fall - DSP/RISC在嵌入式系統及多媒體系統晶片之應用。</small>
+                </div>
+            </li>
+            </ul>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-bottom: 5px; border: 1px solid #eee;">
+            <div class="card-header" id="heading_d4952cac" style="padding: 0; background-color: #fff;">
+                <h5 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" data-target="#collapse_d4952cac" style="color:#333; font-weight:bold; padding: 15px; text-decoration:none;">
+                        <i class="fas fa-calendar-alt mr-2 text-muted"></i> 112 學年度 (2023-2024)
+                        <i class="fas fa-chevron-down float-right mt-1 text-muted" style="font-size: 0.8em;"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapse_d4952cac" class="collapse" data-parent="#accordionCourses">
+                <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_112_CSD.html" style="font-weight:bold; color:#0056b3;">控制系統設計 (Design and Simulation of Control Systems)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20030</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">112 Spring - 學習控制系統之模擬, PID控制器設計、頻域分析與Lead-lag控制器設計。</small>
+                </div>
+            </li>
+            
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_112_ACS.html" style="font-weight:bold; color:#0056b3;">自動控制系統 (Automatic Control Systems)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20055</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">112 Fall - 學習控制理論與應用的基本處理技術。本課程為控制的基礎課程。</small>
+                </div>
+            </li>
+            </ul>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-bottom: 5px; border: 1px solid #eee;">
+            <div class="card-header" id="heading_85a7e071" style="padding: 0; background-color: #fff;">
+                <h5 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" data-target="#collapse_85a7e071" style="color:#333; font-weight:bold; padding: 15px; text-decoration:none;">
+                        <i class="fas fa-calendar-alt mr-2 text-muted"></i> 111 學年度 (2022-2023)
+                        <i class="fas fa-chevron-down float-right mt-1 text-muted" style="font-size: 0.8em;"></i>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapse_85a7e071" class="collapse" data-parent="#accordionCourses">
+                <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_111_CSD.html" style="font-weight:bold; color:#0056b3;">控制系統設計 (Design and Simulation of Control Systems)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20030</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">111 Spring - 學習控制系統之模擬, PID控制器設計、頻域分析與Lead-lag控制器設計。</small>
+                </div>
+            </li>
+            
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_111_ACS.html" style="font-weight:bold; color:#0056b3;">自動控制系統 (Automatic Control Systems)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-primary mr-1" style="font-weight:normal; font-size:0.8em;">電機系</span> EEEC20055</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">111 Fall - 學習控制理論與應用的基本處理技術。本課程為控制的基礎課程。</small>
+                </div>
+            </li>
+            
+            <li class="list-group-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <a href="assets/html/course/course_111_DSP.html" style="font-weight:bold; color:#0056b3;">數位訊號處理 (Digital Signal Processing)</a>
+                        <div class="text-muted" style="font-size:0.9em;"><span class="badge badge-success mr-1" style="font-weight:normal; font-size:0.8em;">電機專</span> EEDE30058</div>
+                    </div>
+                    <small class="text-muted d-none d-sm-block">111 Fall - DSP/RISC在嵌入式系統及多媒體系統晶片之應用。</small>
+                </div>
+            </li>
+            </ul>
+            </div>
+        </div>
+        </div></div>
+    </div>
+    
+        </div>
+    </section>
+    
+
+      <footer class="text-center py-5 text-muted" style="border-top:1px solid #eee;">
+          <div class="mb-3">
+              <img src="assets/brand/logo.jpg" alt="Lab Logo" style="height: 60px; width: auto; opacity: 0.9;">
+          </div>
+          &copy; 2026 CSSP Laboratory, NYCU. All rights reserved.
+      </footer> 
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    
