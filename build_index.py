@@ -43,16 +43,17 @@ LAB_INFO = {
 NEWS_ITEMS = [
     ("2026.02", "🎉 恭喜 實驗室網站全新改版上線。"),
 ]
-
 # 首頁輪播照片 (Carousel)
 # 注意：若使用 Google Drive 圖片，需確保權限已開啟並使用 thumbnail 連結格式
+
 HOME_CAROUSEL_IMAGES = [
+    {"src": "https://drive.google.com/thumbnail?sz=w1000&id=1ENTWuHXiW1f4iggK1wFmjieEOGXEG3WM", "caption": "2026 實驗室尾牙聚餐 @ 新竹-芙洛麗大飯店"},
+    {"src": "https://drive.google.com/thumbnail?sz=w1000&id=19Y-JbPWhpC58I6RcmFWjrI8v_UQIFrFi", "caption": "2026 同學慶生活動 @ 新竹-禧樂橙"},
     {"src": "https://drive.google.com/thumbnail?sz=w1000&id=1A4TNKI0TIl8rVe9TgMU1S1lV2m02ORRy", "caption": "2025 老師慶生活動 @ EE773"},
     {"src": "https://drive.google.com/thumbnail?sz=w1000&id=1Ae6ojjuO5LLWkSkB6-Z-cnpOP4f2yOIb", "caption": "2025 917討論會 @ EE917"},
     {"src": "https://drive.google.com/thumbnail?sz=w1000&id=18SLQAqth93cRcpOrhUG5fMtPJq_5sWrQ", "caption": "2025 團隊榮獲 NAVSIM v2 創新獎 @ ICCV 2025"},
     {"src": "https://drive.google.com/thumbnail?sz=w1000&id=1jRxrb62pIFfASK-1FdKkxQklckCZu-AP", "caption": "2024 新生迎新聚餐 @ 新竹-新天地美食館"},
-    {"src": "https://drive.google.com/thumbnail?sz=w1000&id=1vZPlcmt0KKgQGES-xm1IUlYmwkB-xgs6", "caption": "2024 老師慶生活動 @ EE773"},
-    {"src": "https://drive.google.com/thumbnail?sz=w1000&id=13aTDqmRvYKqMU65cUWRXg_hb4S-RdGcC", "caption": "2024 實驗室聚餐 @ 新竹-愛華火鍋"},
+    # {"src": "https://drive.google.com/thumbnail?sz=w1000&id=1vZPlcmt0KKgQGES-xm1IUlYmwkB-xgs6", "caption": "2024 老師慶生活動 @ EE773"},
 ]
 
 # Resources 頁面的外部連結區塊
