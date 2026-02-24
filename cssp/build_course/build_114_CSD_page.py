@@ -15,13 +15,13 @@ FILENAME = "assets/html/course/course_114_CSD.html"
 COURSE_DATA = {
     "title_zh": "控制系統設計",
     "title_en": "Design and Simulation of Control Systems",
-    "semester": "2025 Spring (114學年度下學期)",
+    "semester": "2026 Spring (114學年度下學期)",
     "tag": "電機系",  # 對應 TAG_STYLE_MAP
     "time_loc": "M2W34 @ 工程五館 623 室 (EE623)",
     "prerequisites": "自動控制系統、線性代數、訊號與系統",
     "textbooks": [
         "F. Golnaraghi and B. C. Kuo, <i>Automatic Control Systems</i>, 10th ed. New York, NY: McGraw-Hill Education, 2017.",
-        "C. L. Phillips, H. T. Nagle, and A. Chakrabortty, <i>Digital Control System Analysis and Design</i>, 4th ed., Global Edition. Harlow, UK: Pearson Education Limited, 2015.",
+        # "C. L. Phillips, H. T. Nagle, and A. Chakrabortty, <i>Digital Control System Analysis and Design</i>, 4th ed., Global Edition. Harlow, UK: Pearson Education Limited, 2015.",
     ],
     "files": [
         # {"title": "課程注意事項 (Course Notice)", "url": "assets/files/ACS_Notice_2018.pdf", "note": "PDF"},
@@ -35,19 +35,23 @@ COURSE_DATA = {
         },
     ],
     "grading": [
-        # {"item": "作業 (Homework)", "percent": 40, "note": "兩次(含)零分，此部分以零分計"},
-        # {"item": "第一次期中考 (1st Midterm)", "percent": 20, "note": ""},
-        # {"item": "第二次期中考 (2nd Midterm)", "percent": 20, "note": ""},
-        # {"item": "期末考 (Final)", "percent": 20, "note": ""}
+        {"item": "作業 (Homework)", "percent": 20, "note": "兩次(含)沒交和零分者，此部分以零分計"},
+        {"item": "第一次期中考 (1st Midterm)", "percent": 25, "note": ""},
+        {"item": "第二次期中考 (2nd Midterm)", "percent": 25, "note": ""},
+        {"item": "期末考 (Final)", "percent": 30, "note": ""}
     ],
-    "office_hours": {"teacher": "Tue. 19:00 - 21:00 at EE773", "ta": "Wed. 19:00 - 21:00 at EE917"},
+    "office_hours": {"teacher": "Mon. 19:00 - 21:00 at EE773", "ta": "Wed. 19:00 - 21:00 at EE917"},
     "tas": [
-        {"name": "李長鑫", "email": "jacky0970711835@gmail.com"},
+        {"name": "李長鑫", "email": "lee313512028.ee13@nycu.edu.tw"},
         {"name": "吳欣諺", "email": "jamiepatty0315@gmail.com"},
     ],
     "ta_office": "工程五館 917 室 (分機 54428)",
     "announcements": [
-        # {"date": "2024/03/26", "title": "期中考 (1st Midterm Exam)"},
+        {"date": "2026/04/01", "title": "期中考 (1st Midterm Exam)"},
+        {"date": "2026/05/06", "title": "期中考 (2nd Midterm Exam)"},
+        {"date": "2026/06/10", "title": "期末考 (Final Exam)"},
+        {"date": "2026/06/17", "title": "原始成績公布 (Raw Grade Post)"},
+        {"date": "2026/06/18", "title": "學期成績公布 (Final Grade Post)"},
     ],
     "homeworks": [
         # {"title": "HW 1", "due": "2024/03/10"},
